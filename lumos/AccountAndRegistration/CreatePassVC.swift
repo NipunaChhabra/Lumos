@@ -10,7 +10,7 @@ import UIKit
 
 class CreatePassVC: UIViewController {
     
-    var RegUser : User!
+    //var RegUser : User!
     
     lazy var CreatePasswordLabel: UILabel = {
         let label = UILabel()
@@ -45,14 +45,14 @@ class CreatePassVC: UIViewController {
     lazy var warningBtn : UIButton = {
       let btn = UIButton()
         btn.setTitle("the password must be 8 characters", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1), for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1), for: .normal)
         btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 15)
         return btn
     }()
 
     lazy var NextNavigation : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btn.tintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
         btn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 60)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -63,7 +63,7 @@ class CreatePassVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         //observeKeyboardNotifications()
         //title = "Registration Step 2/3"
         setupLayout()
@@ -98,11 +98,11 @@ class CreatePassVC: UIViewController {
     let isFormValid = passwordTextField.text?.isEmpty != true && ConfirmPasswordField.text?.isEmpty != true
     
     if isFormValid {
-        NextNavigation.tintColor = #colorLiteral(red: 0.08184012932, green: 0.8078371051, blue: 0.5886109668, alpha: 1)
+        //NextNavigation.tintColor = #colorLiteral(red: 0.08184012932, green: 0.8078371051, blue: 0.5886109668, alpha: 1)
         NextNavigation.isEnabled = true
     }
     else{
-    NextNavigation.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    //NextNavigation.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     NextNavigation.isEnabled = false
     }
 }

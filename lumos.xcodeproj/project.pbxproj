@@ -16,8 +16,12 @@
 		EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */; };
 		EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */; };
 		EA7FE2162688EFF80064B36C /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE2152688EFF80064B36C /* EventService.swift */; };
-		EA7FE244268925020064B36C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE243268925020064B36C /* LoginViewController.swift */; };
-		EA7FE24926892A090064B36C /* registration in Resources */ = {isa = PBXBuildFile; fileRef = EA7FE24826892A090064B36C /* registration */; };
+		EA7FE25126892B330064B36C /* StylingRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25026892B330064B36C /* StylingRegister.swift */; };
+		EA7FE25626892B350064B36C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25526892B350064B36C /* LoginVC.swift */; };
+		EA7FE25B26892B3A0064B36C /* CreatePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */; };
+		EA7FE26026892B3D0064B36C /* MobileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */; };
+		EA7FE26F26892B520064B36C /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */; };
+		EA7FE28426893BC60064B36C /* FloatingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE28326893BC60064B36C /* FloatingMessage.swift */; };
 		EA8F8A8B268713510000AD36 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */; };
 		EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */; };
 		EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */; };
@@ -79,8 +83,12 @@
 		EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogMoreLauncher.swift; sourceTree = "<group>"; };
 		EA7FE2152688EFF80064B36C /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
-		EA7FE243268925020064B36C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EA7FE24826892A090064B36C /* registration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = registration; sourceTree = "<group>"; };
+		EA7FE25026892B330064B36C /* StylingRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylingRegister.swift; sourceTree = "<group>"; };
+		EA7FE25526892B350064B36C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePassVC.swift; sourceTree = "<group>"; };
+		EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailVC.swift; sourceTree = "<group>"; };
+		EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
+		EA7FE28326893BC60064B36C /* FloatingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMessage.swift; sourceTree = "<group>"; };
 		EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumos_lumosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -173,12 +181,10 @@
 		EA6D36B2268791A600715EEF /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
 				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
 				EAF2329026866FE800984520 /* DevelopersVC.swift */,
 				EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */,
 				EAF2327E268664B100984520 /* SettingsLauncher.swift */,
-				EA7FE243268925020064B36C /* LoginViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -256,6 +262,20 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		EA7FE27926892B710064B36C /* AccountAndRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				EA7FE28326893BC60064B36C /* FloatingMessage.swift */,
+				EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */,
+				EA7FE25526892B350064B36C /* LoginVC.swift */,
+				EA7FE25026892B330064B36C /* StylingRegister.swift */,
+				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
+				EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */,
+				EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */,
+			);
+			path = AccountAndRegistration;
+			sourceTree = "<group>";
+		};
 		EA8F8A99268714130000AD36 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,11 +320,11 @@
 		EAE57E5B268644F700DB80D0 /* lumos */ = {
 			isa = PBXGroup;
 			children = (
-				EA7FE24826892A090064B36C /* registration */,
 				EAE57E5C268644F700DB80D0 /* AppDelegate.swift */,
 				EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */,
 				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
 				EA6D36B3268791CB00715EEF /* blog */,
+				EA7FE27926892B710064B36C /* AccountAndRegistration */,
 				EA6D36BD2687B7FF00715EEF /* event */,
 				EA6D36B2268791A600715EEF /* controllers */,
 				EAE57E65268644F700DB80D0 /* Assets.xcassets */,
@@ -444,7 +464,6 @@
 				EA8F8A8E268713510000AD36 /* Montserrat-Light.ttf in Resources */,
 				EA8F8A8F268713510000AD36 /* Montserrat-Black.ttf in Resources */,
 				EA8F8A92268713510000AD36 /* Roboto-Light.ttf in Resources */,
-				EA7FE24926892A090064B36C /* registration in Resources */,
 				EA8F8A94268713510000AD36 /* OpenSans-SemiBold.ttf in Resources */,
 				EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */,
 				EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */,
@@ -580,15 +599,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7FE244268925020064B36C /* LoginViewController.swift in Sources */,
+				EA7FE25626892B350064B36C /* LoginVC.swift in Sources */,
 				EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */,
+				EA7FE25126892B330064B36C /* StylingRegister.swift in Sources */,
 				EAA54E7626872478004F2D5F /* Service.swift in Sources */,
 				EAF232872686687000984520 /* Extensions.swift in Sources */,
 				EA6D36C62687C9D500715EEF /* BlogLauncherViewController.swift in Sources */,
 				EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */,
 				EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */,
+				EA7FE26F26892B520064B36C /* PersonalInfoVC.swift in Sources */,
+				EA7FE25B26892B3A0064B36C /* CreatePassVC.swift in Sources */,
 				EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */,
 				EAFCB5712687000800BD1578 /* BlogCell.swift in Sources */,
+				EA7FE26026892B3D0064B36C /* MobileDetailVC.swift in Sources */,
 				EA7FE2162688EFF80064B36C /* EventService.swift in Sources */,
 				EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */,
 				EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */,
@@ -599,6 +622,7 @@
 				EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */,
 				EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */,
 				EA6D36D12687E12800715EEF /* EventVC.swift in Sources */,
+				EA7FE28426893BC60064B36C /* FloatingMessage.swift in Sources */,
 				EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */,
 				EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */,
 			);

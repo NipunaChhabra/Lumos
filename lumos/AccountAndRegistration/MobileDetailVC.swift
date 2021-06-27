@@ -53,7 +53,7 @@ class MobileDetailVC: UIViewController {
 
     lazy var NextNavigation : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
+        btn.tintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
         btn.setImage(UIImage(systemName: "greaterthan.circle.fill"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 60)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -63,7 +63,7 @@ class MobileDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         //observeKeyboardNotifications()
         //title = "Registration Step 3/3"
         setupLayout()
@@ -94,41 +94,7 @@ class MobileDetailVC: UIViewController {
                 self.MobileNumTextField.becomeFirstResponder()
             }) {}
             return
-        }
-            let tabBarVC = UITabBarController()
-            
-            tabBarVC.tabBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            //tabBarVC.tabBar.tintColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
-            tabBarVC.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6945673304, green: 0.6945673304, blue: 0.6945673304, alpha: 1)
-            tabBarVC.tabBar.tintColor = #colorLiteral(red: 0.7254901961, green: 0.1019607843, blue: 0.1764705882, alpha: 1)
-            
-            let tab1 = UINavigationController(rootViewController: BlogViewController(collectionViewLayout: UICollectionViewFlowLayout()))
-            let tab2 = UINavigationController(rootViewController: EventsCollectionVC(collectionViewLayout: UICollectionViewFlowLayout()))
-            let tab3 = UINavigationController(rootViewController: DevelopersVC())
-            let tab4 = UINavigationController(rootViewController: ProfileVC())
-
-            
-            tabBarVC.setViewControllers([tab1, tab2, tab3, tab4], animated: false)
-            
-            guard let items = tabBarVC.tabBar.items else {
-                return
             }
-    //
-            items[0].image = UIImage(named: "blog icon")
-            items[1].image = UIImage(named: "event")
-            items[2].image = UIImage(systemName: "chevron.left.slash.chevron.right")
-            items[3].image = UIImage(systemName: "person")
-            
-    //        let images = ["rectangle.doc","event","chevron.left.slash.chevron.right","person"]
-    //
-    //        for x in 0..<items.count {
-    //            //items[x].image = UIImage(systemName: images[x])
-    //            items[x].badgeColor = #colorLiteral(red: 0.768627451, green: 0.768627451, blue: 0.768627451, alpha: 1)
-    //        }
-            
-            tabBarVC.modalPresentationStyle = .fullScreen
-            present(tabBarVC, animated: true)
-            //show(BlogViewController(collectionViewLayout: UICollectionViewFlowLayout()), sender: sender)
         }
     
     func validatePhoneNumber(enteredNumber: String) -> Bool {

@@ -10,7 +10,7 @@ import UIKit
 
 class PersonalInfoVC: UIViewController {
     
-    var RegUser : User!
+    //var RegUser : User!
     
 
     lazy var PersonalInfo: UILabel = {
@@ -61,9 +61,9 @@ class PersonalInfoVC: UIViewController {
     
     lazy var NextNavigation : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btn.tintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
         btn.setImage(UIImage(systemName: "greaterthan.circle.fill"), for: .normal)
-        let config = UIImage.SymbolConfiguration(pointSize: 60)
+        let config = UIImage.SymbolConfiguration(pointSize: 45)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.addTarget(self, action: #selector(onNextTapped(_ :)), for: .touchUpInside)
         btn.isEnabled = false
@@ -72,8 +72,8 @@ class PersonalInfoVC: UIViewController {
 
     override func viewDidLoad() {
             super.viewDidLoad()
-            RegUser = User()
-            view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            //RegUser = User()
+            view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             setupLayout()
     }
 
@@ -84,47 +84,47 @@ class PersonalInfoVC: UIViewController {
         PersonalInfo.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
         
         view.addSubview(stepLabel)
-        _ = stepLabel.anchor(top: PersonalInfo.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 15, leftConstant: 21, bottomConstant: 0, rightConstant: 45, heightConstant: 22)
+        _ = stepLabel.anchor(top: PersonalInfo.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 14, leftConstant: 21, bottomConstant: 0, rightConstant: 45, heightConstant: 22)
         
         view.addSubview(firstName)
-        _ = firstName.anchor(top: stepLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 15, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
+        _ = firstName.anchor(top: stepLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 14, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
         
         view.addSubview(lastName)
-        _ = lastName.anchor(top: firstName.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 15, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
+        _ = lastName.anchor(top: firstName.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 5, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
         
         view.addSubview(emailField)
-        _ = emailField.anchor(top: lastName.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 15, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
+        _ = emailField.anchor(top: lastName.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 5, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
         emailField.keyboardType = .emailAddress
         emailField.autocorrectionType = .no
         emailField.autocapitalizationType = .none
         
         view.addSubview(NextNavigation)
-        _ = NextNavigation.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 23, rightConstant: 43, widthConstant: 60, heightConstant: 60)
+        _ = NextNavigation.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 20, rightConstant: 40, widthConstant: 55, heightConstant: 55)
     }
 
         
     @objc func handleInput(){
         let isFormValid = emailField.text?.isEmpty != true && firstName.text?.isEmpty != true && lastName.text?.isEmpty != true
+            
         
         if isFormValid {
-            NextNavigation.tintColor = #colorLiteral(red: 0.08184012932, green: 0.8078371051, blue: 0.5886109668, alpha: 1)
             NextNavigation.isEnabled = true
         }
         else{
-        NextNavigation.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //NextNavigation.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         NextNavigation.isEnabled = false
         }
     }
     
     @objc func onNextTapped(_ sender: UIButton){
         if validateEmail(enteredEmail: emailField.text!){
-            RegUser.firstName = firstName.text!
-            RegUser.lastName = lastName.text!
-            RegUser.email = emailField.text!
+//            RegUser.firstName = firstName.text!
+//            RegUser.lastName = lastName.text!
+//            RegUser.email = emailField.text!
             
             show(CreatePassVC(), sender: sender)}
         else{
-            FloatingMessage().floatingMessage(Message: "Invalid Email Address", Color: .red, onPresentation: {self.emailField.becomeFirstResponder()}){} //todo
+//            FloatingMessage().floatingMessage(Message: "Invalid Email Address", Color: .red, onPresentation: {self.emailField.becomeFirstResponder()}){} //todo
         }
     }
 

@@ -8,7 +8,9 @@
 import UIKit
 
 class EventVC: UIViewController {
-
+    
+    let events = [event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

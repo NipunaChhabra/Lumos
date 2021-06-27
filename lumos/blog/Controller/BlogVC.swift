@@ -26,7 +26,9 @@ class BlogVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.collectionView!.register(BlogCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         collectionView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         collectionView.isScrollEnabled = true
         navigationItem.titleView = titleLabel
@@ -60,6 +62,7 @@ class BlogVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
             }
         }
         
+        
     }
     
     
@@ -78,6 +81,7 @@ class BlogVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BlogCell
         
         cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cell.layer.cornerRadius = 10
         cell.blog = blogs[indexPath.item]
         return cell
     }

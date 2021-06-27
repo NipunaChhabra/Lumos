@@ -31,7 +31,7 @@ class Service {
                 //print("blogs==\(blogs)")
                 self.callBack?(blogs, true,"")
             } catch {
-                //print("error")
+                print("blog api same error")
                 self.callBack?(nil, false, error.localizedDescription)
             }
             

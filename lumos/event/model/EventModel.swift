@@ -6,11 +6,12 @@
 //
 
 import Foundation
-struct category: Decodable{
-    var active: [active]
+struct categoryModel: Decodable{
+    var active: [EventCategories]?
+    var status: String?
 }
 
-struct active: Decodable {
+struct EventCategories: Decodable {
     var name: String?
     var poster: String?
     var description: String?
@@ -27,5 +28,5 @@ struct event: Decodable{
 
 struct event_date_set: Decodable{
     var venue: String?
-    var start_date: String?
+    var start_date: Date?
 }

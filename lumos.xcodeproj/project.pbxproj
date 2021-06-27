@@ -1,0 +1,867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00ACB795636052DD54924036 /* Pods_lumos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BDABA3EF47CE7C3064137 /* Pods_lumos.framework */; };
+		0A7D30EF128CC95046A94859 /* Pods_lumosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2E982CD5765214B6193A7E /* Pods_lumosTests.framework */; };
+		8D8060A9BADC74D115AA1313 /* Pods_lumos_lumosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */; };
+		EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36BE2687B9F800715EEF /* EventModel.swift */; };
+		EA6D36C62687C9D500715EEF /* BlogLauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */; };
+		EA6D36D12687E12800715EEF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36D02687E12800715EEF /* EventVC.swift */; };
+		EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */; };
+		EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */; };
+		EA8F8A8B268713510000AD36 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */; };
+		EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */; };
+		EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */; };
+		EA8F8A8E268713510000AD36 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A83268713500000AD36 /* Montserrat-Light.ttf */; };
+		EA8F8A8F268713510000AD36 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A84268713500000AD36 /* Montserrat-Black.ttf */; };
+		EA8F8A90268713510000AD36 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A85268713500000AD36 /* Montserrat-Medium.ttf */; };
+		EA8F8A91268713510000AD36 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A86268713500000AD36 /* Roboto-LightItalic.ttf */; };
+		EA8F8A92268713510000AD36 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A87268713510000AD36 /* Roboto-Light.ttf */; };
+		EA8F8A93268713510000AD36 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A88268713510000AD36 /* OpenSans-Bold.ttf */; };
+		EA8F8A94268713510000AD36 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A89268713510000AD36 /* OpenSans-SemiBold.ttf */; };
+		EA8F8A95268713510000AD36 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */; };
+		EAA54E7626872478004F2D5F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7526872478004F2D5F /* Service.swift */; };
+		EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7F26874BF9004F2D5F /* blogmodel.swift */; };
+		EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5C268644F700DB80D0 /* AppDelegate.swift */; };
+		EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */; };
+		EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E60268644F700DB80D0 /* HomeTVC.swift */; };
+		EAE57E66268644F700DB80D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE57E65268644F700DB80D0 /* Assets.xcassets */; };
+		EAE57E74268644F800DB80D0 /* lumosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E73268644F800DB80D0 /* lumosTests.swift */; };
+		EAE57E7F268644F800DB80D0 /* lumosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E7E268644F800DB80D0 /* lumosUITests.swift */; };
+		EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E96268646D200DB80D0 /* PracticeVC.swift */; };
+		EAE57E9C2686470F00DB80D0 /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E9B2686470F00DB80D0 /* BlogVC.swift */; };
+		EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */; };
+		EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA52686477600DB80D0 /* AccountVC.swift */; };
+		EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2327E268664B100984520 /* SettingsLauncher.swift */; };
+		EAF232872686687000984520 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF232862686687000984520 /* Extensions.swift */; };
+		EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2329026866FE800984520 /* DevelopersVC.swift */; };
+		EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */; };
+		EAFCB5712687000800BD1578 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFCB5702687000800BD1578 /* BlogCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAE57E70268644F800DB80D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE57E51268644F600DB80D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE57E58268644F600DB80D0;
+			remoteInfo = lumos;
+		};
+		EAE57E7B268644F800DB80D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE57E51268644F600DB80D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE57E58268644F600DB80D0;
+			remoteInfo = lumos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		270073975529AB1B5A969461 /* Pods-lumos-lumosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos-lumosUITests.debug.xcconfig"; path = "Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B2E982CD5765214B6193A7E /* Pods_lumosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F335309097604E37D475AAF /* Pods-lumos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos.debug.xcconfig"; path = "Target Support Files/Pods-lumos/Pods-lumos.debug.xcconfig"; sourceTree = "<group>"; };
+		AD4BDABA3EF47CE7C3064137 /* Pods_lumos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA16BFFAD3E1FB9B2BC27753 /* Pods-lumos-lumosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos-lumosUITests.release.xcconfig"; path = "Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E120BE941F548663402F9D07 /* Pods-lumosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumosTests.release.xcconfig"; path = "Target Support Files/Pods-lumosTests/Pods-lumosTests.release.xcconfig"; sourceTree = "<group>"; };
+		E68D7BEFC9732ED2C05102AD /* Pods-lumos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos.release.xcconfig"; path = "Target Support Files/Pods-lumos/Pods-lumos.release.xcconfig"; sourceTree = "<group>"; };
+		EA6D36BE2687B9F800715EEF /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogLauncherViewController.swift; sourceTree = "<group>"; };
+		EA6D36D02687E12800715EEF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogMoreLauncher.swift; sourceTree = "<group>"; };
+		EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumos_lumosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		EA8F8A83268713500000AD36 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		EA8F8A84268713500000AD36 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		EA8F8A85268713500000AD36 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		EA8F8A86268713500000AD36 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		EA8F8A87268713510000AD36 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		EA8F8A88268713510000AD36 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		EA8F8A89268713510000AD36 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EAA54E7526872478004F2D5F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		EAA54E7F26874BF9004F2D5F /* blogmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blogmodel.swift; sourceTree = "<group>"; };
+		EAE57E59268644F600DB80D0 /* lumos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lumos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE57E5C268644F700DB80D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EAE57E60268644F700DB80D0 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
+		EAE57E65268644F700DB80D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAE57E6A268644F700DB80D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE57E6F268644F800DB80D0 /* lumosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lumosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE57E73268644F800DB80D0 /* lumosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lumosTests.swift; sourceTree = "<group>"; };
+		EAE57E75268644F800DB80D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE57E7A268644F800DB80D0 /* lumosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lumosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE57E7E268644F800DB80D0 /* lumosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lumosUITests.swift; sourceTree = "<group>"; };
+		EAE57E80268644F800DB80D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE57E96268646D200DB80D0 /* PracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeVC.swift; sourceTree = "<group>"; };
+		EAE57E9B2686470F00DB80D0 /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
+		EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesVC.swift; sourceTree = "<group>"; };
+		EAE57EA52686477600DB80D0 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		EAF2327E268664B100984520 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		EAF232862686687000984520 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../programmatic/IsteProgrammatic/extensions/Extensions.swift; sourceTree = "<group>"; };
+		EAF2329026866FE800984520 /* DevelopersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersVC.swift; sourceTree = "<group>"; };
+		EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		EAFCB5702687000800BD1578 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		FCD47F1DB1ADAC6374B303BE /* Pods-lumosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumosTests.debug.xcconfig"; path = "Target Support Files/Pods-lumosTests/Pods-lumosTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAE57E56268644F600DB80D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00ACB795636052DD54924036 /* Pods_lumos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E6C268644F800DB80D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7D30EF128CC95046A94859 /* Pods_lumosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E77268644F800DB80D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8060A9BADC74D115AA1313 /* Pods_lumos_lumosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9AB8D9D85B1F316F5CF24150 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F335309097604E37D475AAF /* Pods-lumos.debug.xcconfig */,
+				E68D7BEFC9732ED2C05102AD /* Pods-lumos.release.xcconfig */,
+				270073975529AB1B5A969461 /* Pods-lumos-lumosUITests.debug.xcconfig */,
+				BA16BFFAD3E1FB9B2BC27753 /* Pods-lumos-lumosUITests.release.xcconfig */,
+				FCD47F1DB1ADAC6374B303BE /* Pods-lumosTests.debug.xcconfig */,
+				E120BE941F548663402F9D07 /* Pods-lumosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E12C46CA216FDB322568A8BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD4BDABA3EF47CE7C3064137 /* Pods_lumos.framework */,
+				EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */,
+				2B2E982CD5765214B6193A7E /* Pods_lumosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA6D36B12687919900715EEF /* services */ = {
+			isa = PBXGroup;
+			children = (
+				EAA54E7526872478004F2D5F /* Service.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		EA6D36B2268791A600715EEF /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
+				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
+				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
+				EAF2329026866FE800984520 /* DevelopersVC.swift */,
+				EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */,
+				EAF2327E268664B100984520 /* SettingsLauncher.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		EA6D36B3268791CB00715EEF /* blog */ = {
+			isa = PBXGroup;
+			children = (
+				EAA54E7F26874BF9004F2D5F /* blogmodel.swift */,
+				EAE57E9B2686470F00DB80D0 /* BlogVC.swift */,
+				EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */,
+				EAFCB5702687000800BD1578 /* BlogCell.swift */,
+				EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */,
+			);
+			path = blog;
+			sourceTree = "<group>";
+		};
+		EA6D36BD2687B7FF00715EEF /* event */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */,
+				EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */,
+				EA6D36D02687E12800715EEF /* EventVC.swift */,
+				EA6D36BE2687B9F800715EEF /* EventModel.swift */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		EA8F8A99268714130000AD36 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */,
+				EA8F8A83268713500000AD36 /* Montserrat-Light.ttf */,
+				EA8F8A84268713500000AD36 /* Montserrat-Black.ttf */,
+				EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */,
+				EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */,
+				EA8F8A88268713510000AD36 /* OpenSans-Bold.ttf */,
+				EA8F8A85268713500000AD36 /* Montserrat-Medium.ttf */,
+				EA8F8A86268713500000AD36 /* Roboto-LightItalic.ttf */,
+				EA8F8A87268713510000AD36 /* Roboto-Light.ttf */,
+				EA8F8A89268713510000AD36 /* OpenSans-SemiBold.ttf */,
+				EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		EAE57E50268644F600DB80D0 = {
+			isa = PBXGroup;
+			children = (
+				EA8F8A99268714130000AD36 /* New Group */,
+				EAE57E5B268644F700DB80D0 /* lumos */,
+				EAE57E72268644F800DB80D0 /* lumosTests */,
+				EAE57E7D268644F800DB80D0 /* lumosUITests */,
+				EAE57E5A268644F600DB80D0 /* Products */,
+				9AB8D9D85B1F316F5CF24150 /* Pods */,
+				E12C46CA216FDB322568A8BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EAE57E5A268644F600DB80D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E59268644F600DB80D0 /* lumos.app */,
+				EAE57E6F268644F800DB80D0 /* lumosTests.xctest */,
+				EAE57E7A268644F800DB80D0 /* lumosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAE57E5B268644F700DB80D0 /* lumos */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E5C268644F700DB80D0 /* AppDelegate.swift */,
+				EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */,
+				EA6D36B3268791CB00715EEF /* blog */,
+				EA6D36BD2687B7FF00715EEF /* event */,
+				EA6D36B2268791A600715EEF /* controllers */,
+				EA6D36B12687919900715EEF /* services */,
+				EAE57E65268644F700DB80D0 /* Assets.xcassets */,
+				EAE57E6A268644F700DB80D0 /* Info.plist */,
+				EAF232862686687000984520 /* Extensions.swift */,
+			);
+			path = lumos;
+			sourceTree = "<group>";
+		};
+		EAE57E72268644F800DB80D0 /* lumosTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E73268644F800DB80D0 /* lumosTests.swift */,
+				EAE57E75268644F800DB80D0 /* Info.plist */,
+			);
+			path = lumosTests;
+			sourceTree = "<group>";
+		};
+		EAE57E7D268644F800DB80D0 /* lumosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E7E268644F800DB80D0 /* lumosUITests.swift */,
+				EAE57E80268644F800DB80D0 /* Info.plist */,
+			);
+			path = lumosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAE57E58268644F600DB80D0 /* lumos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE57E83268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumos" */;
+			buildPhases = (
+				5E7A1D3F0EC5AD8E7AFE06E0 /* [CP] Check Pods Manifest.lock */,
+				EAE57E55268644F600DB80D0 /* Sources */,
+				EAE57E56268644F600DB80D0 /* Frameworks */,
+				EAE57E57268644F600DB80D0 /* Resources */,
+				83817DCA0FBE035FFA90A341 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lumos;
+			productName = lumos;
+			productReference = EAE57E59268644F600DB80D0 /* lumos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAE57E6E268644F800DB80D0 /* lumosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE57E86268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumosTests" */;
+			buildPhases = (
+				31F7D9BD0D56B30E47283BC0 /* [CP] Check Pods Manifest.lock */,
+				EAE57E6B268644F800DB80D0 /* Sources */,
+				EAE57E6C268644F800DB80D0 /* Frameworks */,
+				EAE57E6D268644F800DB80D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAE57E71268644F800DB80D0 /* PBXTargetDependency */,
+			);
+			name = lumosTests;
+			productName = lumosTests;
+			productReference = EAE57E6F268644F800DB80D0 /* lumosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAE57E79268644F800DB80D0 /* lumosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE57E89268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumosUITests" */;
+			buildPhases = (
+				D6A6084C2FA136DD7B8FA711 /* [CP] Check Pods Manifest.lock */,
+				EAE57E76268644F800DB80D0 /* Sources */,
+				EAE57E77268644F800DB80D0 /* Frameworks */,
+				EAE57E78268644F800DB80D0 /* Resources */,
+				76DCFF5D8B6615B2F4CCADDD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAE57E7C268644F800DB80D0 /* PBXTargetDependency */,
+			);
+			name = lumosUITests;
+			productName = lumosUITests;
+			productReference = EAE57E7A268644F800DB80D0 /* lumosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAE57E51268644F600DB80D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					EAE57E58268644F600DB80D0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EAE57E6E268644F800DB80D0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EAE57E58268644F600DB80D0;
+					};
+					EAE57E79268644F800DB80D0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EAE57E58268644F600DB80D0;
+					};
+				};
+			};
+			buildConfigurationList = EAE57E54268644F600DB80D0 /* Build configuration list for PBXProject "lumos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAE57E50268644F600DB80D0;
+			productRefGroup = EAE57E5A268644F600DB80D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAE57E58268644F600DB80D0 /* lumos */,
+				EAE57E6E268644F800DB80D0 /* lumosTests */,
+				EAE57E79268644F800DB80D0 /* lumosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAE57E57268644F600DB80D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8F8A93268713510000AD36 /* OpenSans-Bold.ttf in Resources */,
+				EA8F8A8E268713510000AD36 /* Montserrat-Light.ttf in Resources */,
+				EA8F8A8F268713510000AD36 /* Montserrat-Black.ttf in Resources */,
+				EA8F8A92268713510000AD36 /* Roboto-Light.ttf in Resources */,
+				EA8F8A94268713510000AD36 /* OpenSans-SemiBold.ttf in Resources */,
+				EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */,
+				EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */,
+				EA8F8A91268713510000AD36 /* Roboto-LightItalic.ttf in Resources */,
+				EA8F8A8B268713510000AD36 /* Montserrat-ExtraBold.ttf in Resources */,
+				EA8F8A90268713510000AD36 /* Montserrat-Medium.ttf in Resources */,
+				EAE57E66268644F700DB80D0 /* Assets.xcassets in Resources */,
+				EA8F8A95268713510000AD36 /* OpenSans-ExtraBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E6D268644F800DB80D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E78268644F800DB80D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31F7D9BD0D56B30E47283BC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lumosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E7A1D3F0EC5AD8E7AFE06E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lumos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76DCFF5D8B6615B2F4CCADDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83817DCA0FBE035FFA90A341 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lumos/Pods-lumos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lumos/Pods-lumos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lumos/Pods-lumos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6A6084C2FA136DD7B8FA711 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lumos-lumosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAE57E55268644F600DB80D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */,
+				EAA54E7626872478004F2D5F /* Service.swift in Sources */,
+				EAF232872686687000984520 /* Extensions.swift in Sources */,
+				EA6D36C62687C9D500715EEF /* BlogLauncherViewController.swift in Sources */,
+				EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */,
+				EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */,
+				EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */,
+				EAFCB5712687000800BD1578 /* BlogCell.swift in Sources */,
+				EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */,
+				EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */,
+				EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */,
+				EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */,
+				EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */,
+				EAE57E9C2686470F00DB80D0 /* BlogVC.swift in Sources */,
+				EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */,
+				EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */,
+				EA6D36D12687E12800715EEF /* EventVC.swift in Sources */,
+				EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */,
+				EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E6B268644F800DB80D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE57E74268644F800DB80D0 /* lumosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE57E76268644F800DB80D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE57E7F268644F800DB80D0 /* lumosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAE57E71268644F800DB80D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE57E58268644F600DB80D0 /* lumos */;
+			targetProxy = EAE57E70268644F800DB80D0 /* PBXContainerItemProxy */;
+		};
+		EAE57E7C268644F800DB80D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE57E58268644F600DB80D0 /* lumos */;
+			targetProxy = EAE57E7B268644F800DB80D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EAE57E81268644F800DB80D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAE57E82268644F800DB80D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAE57E84268644F800DB80D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F335309097604E37D475AAF /* Pods-lumos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAE57E85268644F800DB80D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E68D7BEFC9732ED2C05102AD /* Pods-lumos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAE57E87268644F800DB80D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD47F1DB1ADAC6374B303BE /* Pods-lumosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lumos.app/lumos";
+			};
+			name = Debug;
+		};
+		EAE57E88268644F800DB80D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E120BE941F548663402F9D07 /* Pods-lumosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lumos.app/lumos";
+			};
+			name = Release;
+		};
+		EAE57E8A268644F800DB80D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270073975529AB1B5A969461 /* Pods-lumos-lumosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lumos;
+			};
+			name = Debug;
+		};
+		EAE57E8B268644F800DB80D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA16BFFAD3E1FB9B2BC27753 /* Pods-lumos-lumosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lumosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nipuna.lumosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lumos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAE57E54268644F600DB80D0 /* Build configuration list for PBXProject "lumos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE57E81268644F800DB80D0 /* Debug */,
+				EAE57E82268644F800DB80D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE57E83268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE57E84268644F800DB80D0 /* Debug */,
+				EAE57E85268644F800DB80D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE57E86268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE57E87268644F800DB80D0 /* Debug */,
+				EAE57E88268644F800DB80D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE57E89268644F800DB80D0 /* Build configuration list for PBXNativeTarget "lumosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE57E8A268644F800DB80D0 /* Debug */,
+				EAE57E8B268644F800DB80D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAE57E51268644F600DB80D0 /* Project object */;
+}

@@ -11,31 +11,34 @@ class AccountVC: UIViewController {
     
     lazy var signUpBtn : UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
+        btn.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+        //btn.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)//darkmode
         btn.setTitle("Sign Up", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        //btn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)//darkmode
         if isSmalliPhone(){
-          btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 22)
+          btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 20)
         }else{
-            btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 30)
+            btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 28)
         }
         btn.layer.borderColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
         btn.layer.borderWidth = 0.5
         btn.layer.cornerRadius = 25.0
-       // btn.addTarget(self, action: #selector(onSignupTapped(_ :)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(onSignupTapped(_ :)), for: .touchUpInside)
         return btn
     }()
     
     lazy var loginBtn : UIButton = {
       let btn = UIButton()
         btn.setTitle("Already have an account? Login", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1), for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1), for: .normal)
+        btn.setTitleColor(#colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1), for: .normal)//darkmode
         if isSmalliPhone(){
-            btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 12)
+            btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 10)
         }else{
-            btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 17)
+            btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 16)
         }
-        //btn.addTarget(self, action: #selector(onlogintapped(_ :)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(onlogintapped(_ :)), for: .touchUpInside)
         return btn
     }()
     
@@ -60,18 +63,31 @@ class AccountVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.5258943439, green: 0.001558654243, blue: 0.7766222358, alpha: 0.9235805458)
         navigationItem.titleView = titleLabel
+        setupLayout()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupLayout(){
+        view.addSubview(signUpBtn)
+        view.addSubview(loginBtn)
+        
+        _ = loginBtn.anchor(top: nil, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 30, bottomConstant: 120, rightConstant: 30)
+        
+        view.addConstraint(NSLayoutConstraint(item: loginBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50))
+        
+        _ = signUpBtn.anchor(top: nil, left: view.leftAnchor, bottom: loginBtn.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 50, bottomConstant: 8, rightConstant: 50)
+        
+        view.addConstraint(NSLayoutConstraint(item: signUpBtn, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40))
+        
     }
-    */
+    
+    @objc func onlogintapped(_ sender: UIButton){
+        show(LoginVC(), sender: sender)
+    }
+    
+    @objc func onSignupTapped(_ sender: UIButton){
+        show(PersonalInfoVC(), sender: sender)
+    }
 
 }

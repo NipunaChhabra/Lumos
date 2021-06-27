@@ -16,6 +16,8 @@
 		EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */; };
 		EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */; };
 		EA7FE2162688EFF80064B36C /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE2152688EFF80064B36C /* EventService.swift */; };
+		EA7FE244268925020064B36C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE243268925020064B36C /* LoginViewController.swift */; };
+		EA7FE24926892A090064B36C /* registration in Resources */ = {isa = PBXBuildFile; fileRef = EA7FE24826892A090064B36C /* registration */; };
 		EA8F8A8B268713510000AD36 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */; };
 		EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */; };
 		EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */; };
@@ -77,6 +79,8 @@
 		EA6D36D52687E21B00715EEF /* EventCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogMoreLauncher.swift; sourceTree = "<group>"; };
 		EA7FE2152688EFF80064B36C /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		EA7FE243268925020064B36C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA7FE24826892A090064B36C /* registration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = registration; sourceTree = "<group>"; };
 		EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumos_lumosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				EAF2329026866FE800984520 /* DevelopersVC.swift */,
 				EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */,
 				EAF2327E268664B100984520 /* SettingsLauncher.swift */,
+				EA7FE243268925020064B36C /* LoginViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 		EAE57E5B268644F700DB80D0 /* lumos */ = {
 			isa = PBXGroup;
 			children = (
+				EA7FE24826892A090064B36C /* registration */,
 				EAE57E5C268644F700DB80D0 /* AppDelegate.swift */,
 				EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */,
 				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
@@ -438,6 +444,7 @@
 				EA8F8A8E268713510000AD36 /* Montserrat-Light.ttf in Resources */,
 				EA8F8A8F268713510000AD36 /* Montserrat-Black.ttf in Resources */,
 				EA8F8A92268713510000AD36 /* Roboto-Light.ttf in Resources */,
+				EA7FE24926892A090064B36C /* registration in Resources */,
 				EA8F8A94268713510000AD36 /* OpenSans-SemiBold.ttf in Resources */,
 				EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */,
 				EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */,
@@ -573,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7FE244268925020064B36C /* LoginViewController.swift in Sources */,
 				EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */,
 				EAA54E7626872478004F2D5F /* Service.swift in Sources */,
 				EAF232872686687000984520 /* Extensions.swift in Sources */,

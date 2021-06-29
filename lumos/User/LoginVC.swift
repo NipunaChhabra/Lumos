@@ -10,6 +10,8 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    var user:User?
+    
     lazy var LoginBtn : UIButton = {
         let btn = UIButton()
         btn.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
@@ -79,6 +81,9 @@ class LoginVC: UIViewController {
         return emailPredicate.evaluate(with: enteredEmail)
     }
     
+    //var logindelegate = LoginDelegate?
+    
+    
     @objc func onLoginTapped(_ sender: UIButton){
         
         guard let username = UsernameTextField.text else {
@@ -90,26 +95,34 @@ class LoginVC: UIViewController {
             return
             
         }
+        print(username)
+        print(password)
 
         
         guard let url = URL(string: "https://test.istemanipal.com/api/login") else { return }
         
         var loginRequest = URLRequest(url: url)
-        loginRequest.httpMethod = "PUT"
-        
+        loginRequest.httpMethod = "POST"
+        loginRequest.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         do {
             let params = ["username": username, "password": password]
             loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init())
             
             URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
                 
-                if let err = err {
-                    print("Failed to login:", err)
-                    return
+//                if let response = resp {
+//                    //print("response\(response)")
+//                }
+                if let data = data {
+                    do {
+                        self.user = try JSONDecoder().decode(User.self, from: data)
+                        UserDefaults.standard.set(true,forKey: "isLoggedIn")
+                        UserDefaults.standard.synchronize()
+                    } catch {
+                        print("error\(error)")
+                    }
                 }
                 
-                print("logged in successfully..")
-                //self.fetchPosts()
             }.resume() // never forget this resume
         } catch {
             print("Failed to serialize data:", error)
@@ -138,4 +151,6 @@ class LoginVC: UIViewController {
             
             }, completion: nil)
     }
+    
+
 }

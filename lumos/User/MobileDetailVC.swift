@@ -91,11 +91,12 @@ class MobileDetailVC: UIViewController {
         guard let number = MobileNumTextField.text else { return }
        
         if validatePhoneNumber(enteredNumber: number) == false{
-            FloatingMessage().floatingMessage(Message: "Invalid Phone Number", Color: .red, onPresentation: {
-                self.MobileNumTextField.becomeFirstResponder()
-            }) {}
+//            FloatingMessage().floatingMessage(Message: "Invalid Phone Number", Color: .red, onPresentation: {
+//                self.MobileNumTextField.becomeFirstResponder()
+//            }) {}
             return
             }
+        show(LoginVC(), sender: sender)
         }
     
     func validatePhoneNumber(enteredNumber: String) -> Bool {

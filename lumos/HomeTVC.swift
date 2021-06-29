@@ -7,10 +7,14 @@
 
 import UIKit
 
-class HomeTVC: UITabBarController {
+//protocol LoginDelegate{
+//    func finishLoggingIn()
+//}
+class HomeTVC: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTabBar()
 //        for family: String in UIFont.familyNames
 //        {
@@ -20,18 +24,37 @@ class HomeTVC: UITabBarController {
 //        }
     }
     
-
+//    func finishLoggingIn(){
+//        print("logged in successfully..")
+//    }
+    
+    fileprivate func isLoggedIn()->Bool{
+            return UserDefaults.standard.bool(forKey: "isLoggedIn")
+    }
 
 
     func setupTabBar(){
+        
         tabBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6945673304, green: 0.6945673304, blue: 0.6945673304, alpha: 1)
        tabBar.tintColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
         
-        let tab1 = UINavigationController(rootViewController: BlogVC(collectionViewLayout: UICollectionViewFlowLayout()))
+        let tab1 = UINavigationController(rootViewController: BlogCollectionVC(collectionViewLayout: UICollectionViewFlowLayout()))
         let tab2 = UINavigationController(rootViewController: EventCategoriesVC(collectionViewLayout: UICollectionViewFlowLayout()))
-        let tab3 = UINavigationController(rootViewController: PracticeVC())
-        let tab4 = UINavigationController(rootViewController: AccountVC())
+        
+        var tab3 = UINavigationController(rootViewController: DummyVC())
+        if isLoggedIn(){
+            tab3 = UINavigationController(rootViewController: PracticeVC())
+        }else{
+            tab3 = UINavigationController(rootViewController: DummyVC())
+        }
+        
+        var tab4 = UINavigationController(rootViewController: AccountVC())
+        if isLoggedIn(){
+            tab4 = UINavigationController(rootViewController: AccountVC())
+        }else{
+            tab4 = UINavigationController(rootViewController: LandingVC())
+        }
 
         setViewControllers([tab1, tab2, tab3, tab4], animated: false)
         

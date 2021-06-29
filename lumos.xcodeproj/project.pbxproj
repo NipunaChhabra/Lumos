@@ -10,6 +10,8 @@
 		00ACB795636052DD54924036 /* Pods_lumos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BDABA3EF47CE7C3064137 /* Pods_lumos.framework */; };
 		0A7D30EF128CC95046A94859 /* Pods_lumosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2E982CD5765214B6193A7E /* Pods_lumosTests.framework */; };
 		8D8060A9BADC74D115AA1313 /* Pods_lumos_lumosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */; };
+		EA2986D3268AD4BE007C7F67 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2986D2268AD4BE007C7F67 /* LandingVC.swift */; };
+		EA2986DB268AD9E4007C7F67 /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2986DA268AD9E4007C7F67 /* DummyVC.swift */; };
 		EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36BE2687B9F800715EEF /* EventModel.swift */; };
 		EA6D36C62687C9D500715EEF /* BlogLauncherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */; };
 		EA6D36D12687E12800715EEF /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D36D02687E12800715EEF /* EventVC.swift */; };
@@ -21,7 +23,6 @@
 		EA7FE25B26892B3A0064B36C /* CreatePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */; };
 		EA7FE26026892B3D0064B36C /* MobileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */; };
 		EA7FE26F26892B520064B36C /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */; };
-		EA7FE28426893BC60064B36C /* FloatingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7FE28326893BC60064B36C /* FloatingMessage.swift */; };
 		EA8F8A8B268713510000AD36 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */; };
 		EA8F8A8C268713510000AD36 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */; };
 		EA8F8A8D268713510000AD36 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A82268713500000AD36 /* Montserrat-Thin.ttf */; };
@@ -35,6 +36,8 @@
 		EA8F8A95268713510000AD36 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */; };
 		EAA54E7626872478004F2D5F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7526872478004F2D5F /* Service.swift */; };
 		EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7F26874BF9004F2D5F /* blogmodel.swift */; };
+		EAAE7B7E268AF08600FAC6EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE7B7D268AF08600FAC6EF /* User.swift */; };
+		EAAE7B8B268AF8B100FAC6EF /* blogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE7B8A268AF8B100FAC6EF /* blogService.swift */; };
 		EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5C268644F700DB80D0 /* AppDelegate.swift */; };
 		EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */; };
 		EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E60268644F700DB80D0 /* HomeTVC.swift */; };
@@ -42,7 +45,7 @@
 		EAE57E74268644F800DB80D0 /* lumosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E73268644F800DB80D0 /* lumosTests.swift */; };
 		EAE57E7F268644F800DB80D0 /* lumosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E7E268644F800DB80D0 /* lumosUITests.swift */; };
 		EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E96268646D200DB80D0 /* PracticeVC.swift */; };
-		EAE57E9C2686470F00DB80D0 /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E9B2686470F00DB80D0 /* BlogVC.swift */; };
+		EAE57E9C2686470F00DB80D0 /* BlogCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */; };
 		EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */; };
 		EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA52686477600DB80D0 /* AccountVC.swift */; };
 		EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2327E268664B100984520 /* SettingsLauncher.swift */; };
@@ -77,6 +80,8 @@
 		BA16BFFAD3E1FB9B2BC27753 /* Pods-lumos-lumosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos-lumosUITests.release.xcconfig"; path = "Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E120BE941F548663402F9D07 /* Pods-lumosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumosTests.release.xcconfig"; path = "Target Support Files/Pods-lumosTests/Pods-lumosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E68D7BEFC9732ED2C05102AD /* Pods-lumos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos.release.xcconfig"; path = "Target Support Files/Pods-lumos/Pods-lumos.release.xcconfig"; sourceTree = "<group>"; };
+		EA2986D2268AD4BE007C7F67 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
+		EA2986DA268AD9E4007C7F67 /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
 		EA6D36BE2687B9F800715EEF /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogLauncherViewController.swift; sourceTree = "<group>"; };
 		EA6D36D02687E12800715EEF /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
@@ -88,7 +93,6 @@
 		EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePassVC.swift; sourceTree = "<group>"; };
 		EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailVC.swift; sourceTree = "<group>"; };
 		EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
-		EA7FE28326893BC60064B36C /* FloatingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingMessage.swift; sourceTree = "<group>"; };
 		EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lumos_lumosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8F8A80268713500000AD36 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EA8F8A81268713500000AD36 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EAA54E7526872478004F2D5F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EAA54E7F26874BF9004F2D5F /* blogmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blogmodel.swift; sourceTree = "<group>"; };
+		EAAE7B7D268AF08600FAC6EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EAAE7B8A268AF8B100FAC6EF /* blogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blogService.swift; sourceTree = "<group>"; };
 		EAE57E59268644F600DB80D0 /* lumos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lumos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE57E5C268644F700DB80D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +122,7 @@
 		EAE57E7E268644F800DB80D0 /* lumosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lumosUITests.swift; sourceTree = "<group>"; };
 		EAE57E80268644F800DB80D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE57E96268646D200DB80D0 /* PracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeVC.swift; sourceTree = "<group>"; };
-		EAE57E9B2686470F00DB80D0 /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
+		EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCollectionVC.swift; sourceTree = "<group>"; };
 		EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesVC.swift; sourceTree = "<group>"; };
 		EAE57EA52686477600DB80D0 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		EAF2327E268664B100984520 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
@@ -178,15 +184,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA6D36B2268791A600715EEF /* controllers */ = {
+		EA6D36B2268791A600715EEF /* sidemenu */ = {
 			isa = PBXGroup;
 			children = (
-				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
 				EAF2329026866FE800984520 /* DevelopersVC.swift */,
 				EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */,
 				EAF2327E268664B100984520 /* SettingsLauncher.swift */,
 			);
-			path = controllers;
+			path = sidemenu;
 			sourceTree = "<group>";
 		};
 		EA6D36B3268791CB00715EEF /* blog */ = {
@@ -196,6 +201,7 @@
 				EA7FE2112688E9740064B36C /* Controller */,
 				EA7FE2102688E9650064B36C /* view */,
 				EA7FE20F2688E9580064B36C /* model */,
+				EAAE7B8A268AF8B100FAC6EF /* blogService.swift */,
 			);
 			path = blog;
 			sourceTree = "<group>";
@@ -231,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */,
-				EAE57E9B2686470F00DB80D0 /* BlogVC.swift */,
+				EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */,
 				EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */,
 			);
 			path = Controller;
@@ -262,18 +268,18 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		EA7FE27926892B710064B36C /* AccountAndRegistration */ = {
+		EA7FE27926892B710064B36C /* User */ = {
 			isa = PBXGroup;
 			children = (
-				EA7FE28326893BC60064B36C /* FloatingMessage.swift */,
+				EA2986D2268AD4BE007C7F67 /* LandingVC.swift */,
 				EA7FE25526892B350064B36C /* LoginVC.swift */,
-				EA7FE25026892B330064B36C /* StylingRegister.swift */,
-				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
 				EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */,
 				EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */,
 				EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */,
+				EA7FE25026892B330064B36C /* StylingRegister.swift */,
+				EAAE7B7D268AF08600FAC6EF /* User.swift */,
 			);
-			path = AccountAndRegistration;
+			path = User;
 			sourceTree = "<group>";
 		};
 		EA8F8A99268714130000AD36 /* New Group */ = {
@@ -323,10 +329,13 @@
 				EAE57E5C268644F700DB80D0 /* AppDelegate.swift */,
 				EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */,
 				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
+				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
+				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
+				EA2986DA268AD9E4007C7F67 /* DummyVC.swift */,
 				EA6D36B3268791CB00715EEF /* blog */,
-				EA7FE27926892B710064B36C /* AccountAndRegistration */,
+				EA7FE27926892B710064B36C /* User */,
 				EA6D36BD2687B7FF00715EEF /* event */,
-				EA6D36B2268791A600715EEF /* controllers */,
+				EA6D36B2268791A600715EEF /* sidemenu */,
 				EAE57E65268644F700DB80D0 /* Assets.xcassets */,
 				EAE57E6A268644F700DB80D0 /* Info.plist */,
 				EAF232862686687000984520 /* Extensions.swift */,
@@ -601,12 +610,15 @@
 			files = (
 				EA7FE25626892B350064B36C /* LoginVC.swift in Sources */,
 				EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */,
+				EA2986D3268AD4BE007C7F67 /* LandingVC.swift in Sources */,
 				EA7FE25126892B330064B36C /* StylingRegister.swift in Sources */,
+				EA2986DB268AD9E4007C7F67 /* DummyVC.swift in Sources */,
 				EAA54E7626872478004F2D5F /* Service.swift in Sources */,
 				EAF232872686687000984520 /* Extensions.swift in Sources */,
 				EA6D36C62687C9D500715EEF /* BlogLauncherViewController.swift in Sources */,
 				EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */,
 				EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */,
+				EAAE7B8B268AF8B100FAC6EF /* blogService.swift in Sources */,
 				EA7FE26F26892B520064B36C /* PersonalInfoVC.swift in Sources */,
 				EA7FE25B26892B3A0064B36C /* CreatePassVC.swift in Sources */,
 				EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */,
@@ -617,12 +629,12 @@
 				EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */,
 				EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */,
 				EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */,
+				EAAE7B7E268AF08600FAC6EF /* User.swift in Sources */,
 				EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */,
-				EAE57E9C2686470F00DB80D0 /* BlogVC.swift in Sources */,
+				EAE57E9C2686470F00DB80D0 /* BlogCollectionVC.swift in Sources */,
 				EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */,
 				EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */,
 				EA6D36D12687E12800715EEF /* EventVC.swift in Sources */,
-				EA7FE28426893BC60064B36C /* FloatingMessage.swift in Sources */,
 				EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */,
 				EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */,
 			);

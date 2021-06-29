@@ -115,15 +115,15 @@ class CreatePassVC: UIViewController {
     @objc func onNextTapped(_ sender: UIButton){
         guard let password = passwordTextField.text else { return }
         if (passwordTextField.text != ConfirmPasswordField.text){
-            FloatingMessage().floatingMessage(Message: "Passwords do not match", Color: .red, onPresentation: {
-                self.ConfirmPasswordField.becomeFirstResponder()
-            }) {}
+//            FloatingMessage().floatingMessage(Message: "Passwords do not match", Color: .red, onPresentation: {
+//                self.ConfirmPasswordField.becomeFirstResponder()
+//            }) {}
             return
         }
         if (password.count < 8){
-            FloatingMessage().floatingMessage(Message: "password length less than 8", Color: .red, onPresentation: {
-                self.ConfirmPasswordField.becomeFirstResponder()
-            }) {}
+//            FloatingMessage().floatingMessage(Message: "password length less than 8", Color: .red, onPresentation: {
+//                self.ConfirmPasswordField.becomeFirstResponder()
+//            }) {}
             return
         }
             show(MobileDetailVC(), sender: sender)

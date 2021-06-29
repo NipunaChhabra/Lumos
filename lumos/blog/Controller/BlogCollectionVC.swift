@@ -7,7 +7,7 @@
 
 import UIKit
 private let reuseIdentifier = "Cell"
-class BlogVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     var blogs = [Blog]()
     

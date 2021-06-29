@@ -125,7 +125,7 @@ class PersonalInfoVC: UIViewController {
             
             show(CreatePassVC(), sender: sender)}
         else{
-//            FloatingMessage().floatingMessage(Message: "Invalid Email Address", Color: .red, onPresentation: {self.emailField.becomeFirstResponder()}){} //todo
+            FloatingMessage().floatingMessage(Message: "Invalid Email Address", Color: .red, onPresentation: {self.emailField.becomeFirstResponder()}){} //todo
         }
     }
 

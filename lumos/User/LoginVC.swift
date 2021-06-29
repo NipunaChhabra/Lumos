@@ -33,6 +33,8 @@ class LoginVC: UIViewController {
         let txtfield = LeftPaddedTextField()
         //txtfield.placeholder = "Username"
         txtfield.cutomizeTextFields(name: "Username")
+        txtfield.autocapitalizationType = .none
+        txtfield.autocorrectionType = .no
         return txtfield
     }()
     
@@ -41,6 +43,8 @@ class LoginVC: UIViewController {
         //txtfield.placeholder = "Password"
         txtfield.cutomizeTextFields(name: "Password")
         txtfield.isSecureTextEntry = true
+        txtfield.autocapitalizationType = .none
+        txtfield.autocorrectionType = .no
         return txtfield
     }()
     
@@ -77,8 +81,15 @@ class LoginVC: UIViewController {
     
     @objc func onLoginTapped(_ sender: UIButton){
         
-        guard let username = UsernameTextField.text else { return }
-        guard let password = PasswordTextField.text else { return }
+        guard let username = UsernameTextField.text else {
+//            FloatingMessage().floatingMessage(Message: "Username empty", Color: .red, onPresentation: {self.UsernameTextField.becomeFirstResponder()}){}
+            return
+        }
+        guard let password = PasswordTextField.text else {
+//            FloatingMessage().floatingMessage(Message: "Password empty", Color: .red, onPresentation: {self.PasswordTextField.becomeFirstResponder()}){}
+            return
+            
+        }
 
         
         guard let url = URL(string: "https://test.istemanipal.com/api/login") else { return }

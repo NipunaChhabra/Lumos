@@ -43,5 +43,7 @@ extension UILabel{
        font = UIFont(name: "Montserrat-Bold", size: 18)
        textAlignment = NSTextAlignment.left
     }
+    
+    
 }
 

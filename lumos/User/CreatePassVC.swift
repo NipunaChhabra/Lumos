@@ -30,6 +30,8 @@ class CreatePassVC: UIViewController {
         let txtfield = LeftPaddedTextField()
         //txtfield.placeholder = "Password"
         txtfield.cutomizeTextFields(name: "Password")
+        txtfield.autocapitalizationType = .none
+        txtfield.autocorrectionType = .no
         txtfield.addTarget(self, action: #selector(handleInput), for: .editingChanged)
         return txtfield
     }()
@@ -38,6 +40,8 @@ class CreatePassVC: UIViewController {
         let txtfield = LeftPaddedTextField()
         //txtfield.placeholder = "Confirm Password"
         txtfield.cutomizeTextFields(name: "Confirm Password")
+        txtfield.autocapitalizationType = .none
+        txtfield.autocorrectionType = .no
         txtfield.addTarget(self, action: #selector(handleInput), for: .editingChanged)
         return txtfield
     }()

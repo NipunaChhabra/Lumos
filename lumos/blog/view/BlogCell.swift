@@ -128,10 +128,7 @@ class BlogCell: UICollectionViewCell {
     
     @objc func onElipTapped(_ sender: UIButton){
         blogMoreLauncher.showDim()
-        if let title = blog?.title {
-            blogMoreLauncher.titleLabel.text = title
-        }
-        
+        blogMoreLauncher.blog = blog
     }
     
 }

@@ -8,7 +8,20 @@
 import Foundation
 import UIKit
 
-class BlogMoreLauncher: NSObject{
+class BlogMoreLauncher: UIViewController{
+    
+    var id = ""
+    
+    var blog:Blog?{
+        didSet{
+            if let title = blog?.title {
+                titleLabel.text = title
+            }
+            if let ID = blog?._id{
+            self.id = ID
+            }
+        }
+    }
     
     lazy var titleLabel : UILabel = {
        let label = UILabel()
@@ -30,7 +43,7 @@ class BlogMoreLauncher: NSObject{
         let config = UIImage.SymbolConfiguration(pointSize: 40)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-        btn.addTarget(self, action: #selector(handleDismiss(_:)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(handleShare(_:)), for: .touchUpInside)
         return btn
     }()
     
@@ -116,7 +129,11 @@ class BlogMoreLauncher: NSObject{
         
     }
     
-    override init() {
-        super.init()
+    @objc func handleShare(_ sender: UIView){
+        let activityVC = UIActivityViewController(activityItems: ["https://blog.istemanipal.com/articles/single//\(id)"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = sender
+        self.present(activityVC,animated:true,completion:nil)
     }
+    
+
 }

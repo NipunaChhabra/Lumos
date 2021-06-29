@@ -223,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				EAFCB5702687000800BD1578 /* BlogCell.swift */,
-				EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -233,6 +232,7 @@
 			children = (
 				EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */,
 				EAE57E9B2686470F00DB80D0 /* BlogVC.swift */,
+				EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -266,12 +266,12 @@
 			isa = PBXGroup;
 			children = (
 				EA7FE28326893BC60064B36C /* FloatingMessage.swift */,
-				EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */,
 				EA7FE25526892B350064B36C /* LoginVC.swift */,
 				EA7FE25026892B330064B36C /* StylingRegister.swift */,
 				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
-				EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */,
 				EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */,
+				EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */,
+				EA7FE25F26892B3D0064B36C /* MobileDetailVC.swift */,
 			);
 			path = AccountAndRegistration;
 			sourceTree = "<group>";

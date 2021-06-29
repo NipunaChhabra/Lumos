@@ -67,6 +67,7 @@ class CreatePassVC: UIViewController {
         //observeKeyboardNotifications()
         //title = "Registration Step 2/3"
         setupLayout()
+        observeKeyboardNotifications()
 
     }
     
@@ -122,6 +123,30 @@ class CreatePassVC: UIViewController {
             return
         }
             show(MobileDetailVC(), sender: sender)
-        }
-        
     }
+    
+    fileprivate func observeKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardHide() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            
+            }, completion: nil)
+    }
+    
+    @objc func keyboardShow() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.view.frame = CGRect(x: 0, y: -220, width: self.view.frame.width, height: self.view.frame.height)
+            
+            }, completion: nil)
+    }
+    
+
+        
+}

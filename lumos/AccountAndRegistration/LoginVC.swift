@@ -40,6 +40,7 @@ class LoginVC: UIViewController {
         let txtfield = LeftPaddedTextField()
         //txtfield.placeholder = "Password"
         txtfield.cutomizeTextFields(name: "Password")
+        txtfield.isSecureTextEntry = true
         return txtfield
     }()
     
@@ -48,6 +49,7 @@ class LoginVC: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         //title = "Login"
         setupLayout()
+        observeKeyboardNotifications()
 
     }
     
@@ -74,6 +76,55 @@ class LoginVC: UIViewController {
     }
     
     @objc func onLoginTapped(_ sender: UIButton){
+        
+        guard let username = UsernameTextField.text else { return }
+        guard let password = PasswordTextField.text else { return }
+
+        
+        guard let url = URL(string: "https://test.istemanipal.com/api/login") else { return }
+        
+        var loginRequest = URLRequest(url: url)
+        loginRequest.httpMethod = "PUT"
+        
+        do {
+            let params = ["username": username, "password": password]
+            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init())
+            
+            URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
+                
+                if let err = err {
+                    print("Failed to login:", err)
+                    return
+                }
+                
+                print("logged in successfully..")
+                //self.fetchPosts()
+            }.resume() // never forget this resume
+        } catch {
+            print("Failed to serialize data:", error)
+        }
        
+    }
+    
+    fileprivate func observeKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardHide() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            
+            }, completion: nil)
+    }
+    
+    @objc func keyboardShow() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            
+            self.view.frame = CGRect(x: 0, y: -200, width: self.view.frame.width, height: self.view.frame.height)
+            
+            }, completion: nil)
     }
 }

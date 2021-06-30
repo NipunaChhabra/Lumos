@@ -14,8 +14,8 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
     lazy var titleLabel : UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
         let string = NSMutableAttributedString(string: "EventCategories.")
-        string.setColorForText("Event", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText("Categories.", with: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+        string.setColorForText(textForAttribute: "Event", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        string.setColorForText(textForAttribute: "Categories.", withColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
         label.attributedText = string
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
         label.textAlignment = NSTextAlignment.left
@@ -36,17 +36,27 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView.isScrollEnabled = true
         navigationController?.navigationBar.isTranslucent = false
         
+        let btn = UIButton(type: .custom)
+        btn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30)
+        btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
+        btn.clipsToBounds = true
+        btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let rightBarButtonItem = UIBarButtonItem()
+       rightBarButtonItem.customView = btn
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
         let service = EventService(baseUrl: "https://test.istemanipal.com/api/")
-        service.getAllCategories(endPoint: "/category")
-        service.completionHandler { [weak self] (category, status, message) in
+        service.getAllCategories(endPoint: "category")
+        service.completionHandler { [weak self] (cat, status, message) in
             if status {
-               guard let self = self else {return}
-                guard let _categories = category?.active else {return}
-                self.categories = _categories
-                self.collectionView.reloadData()
+                guard let self = self else {return}
+                guard let _cat = cat?.active else {return}
+                self.categories = _cat
+               self.collectionView.reloadData()
             }
-    }
-
+        }
+        
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,7 +64,8 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3//categories.count
+        //print(categories.count)
+        return categories.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,19 +74,25 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
         
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.layer.cornerRadius = 10
-        //cell.category = categories[indexPath.item]
+        cell.category = categories[indexPath.item]
+        //print(categories[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let item = categories[indexPath.row]
-//        let itemSize = item.active.description.size(withAttributes: [
-//                    NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)
-//                ])
-//        return .init(width: view.frame.width-20, height: 200+itemSize.height)
-        return .init(width: view.frame.width-20, height: 250)
-        
+        let category = categories[indexPath.row]
+        //var itemSize = CGSize(width: 0,height: 50)
+        guard let itemSize = category.description?.size(withAttributes: [
+            NSAttributedString.Key.font : UIFont(name: "Montserrat-Medium", size: 25)!
+                ])
+        else{
+            //let itemSize = CGSize(width: 50,height: 50)
+            print("else block mein aa gaya")
+            return .init(width: view.frame.width-20, height: 250)
+        }
+        print("height is \(itemSize.height)")
+        return .init(width: view.frame.width-20, height: 300+itemSize.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -87,9 +104,17 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let EventV = EventVC()
-        //EventV.events = categories[indexPath.item].events
-        show(EventV, sender: self)
+        if let events = categories[indexPath.item].events{
+            let VC = EventVC(collectionViewLayout: UICollectionViewFlowLayout())
+            VC.events = events
+            VC.titleLabel.text = categories[indexPath.item].name
+            show(VC, sender: self)
+        }else{
+            let VC = DummyVC()
+            VC.titleLabel.text = categories[indexPath.item].name
+            VC.Info.text = "No Events"
+        }
+
     }
     
 }

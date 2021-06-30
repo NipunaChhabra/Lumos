@@ -12,6 +12,8 @@ import UIKit
 //}
 class HomeTVC: UITabBarController{
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,14 +46,18 @@ class HomeTVC: UITabBarController{
         
         var tab3 = UINavigationController(rootViewController: DummyVC())
         if isLoggedIn(){
-            tab3 = UINavigationController(rootViewController: PracticeVC())
+            let pvc = PracticeVC()
+            //pvc.user = self.user!
+            tab3 = UINavigationController(rootViewController: pvc)
         }else{
             tab3 = UINavigationController(rootViewController: DummyVC())
         }
         
-        var tab4 = UINavigationController(rootViewController: AccountVC())
+        var tab4 = UINavigationController(rootViewController: LandingVC())
         if isLoggedIn(){
-            tab4 = UINavigationController(rootViewController: AccountVC())
+            let acc = AccountVC()
+            //acc.user = self.user!
+            tab4 = UINavigationController(rootViewController: acc)
         }else{
             tab4 = UINavigationController(rootViewController: LandingVC())
         }

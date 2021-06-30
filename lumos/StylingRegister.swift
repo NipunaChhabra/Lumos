@@ -47,3 +47,32 @@ extension UILabel{
     
 }
 
+//extension UIButton {
+//    func setColoredTitle(){
+//        let string = NSMutableAttributedString(string: "TechnicalProphet.", attributes:[NSAttributedString.Key.font : UIFont(name: "OpenSans-ExtraBold", size: 22)!])
+//        string.setColorForText("Technical", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+//        string.setColorForText("Prophet.", with: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+//        setAttributedTitle(string, for: .normal)
+//        setImage(UIImage(named: "3dots"), for: .normal)
+//    }
+//
+//    open override func layoutSubviews() {
+//        super.layoutSubviews()
+//        if imageView != nil {
+//            imageEdgeInsets = UIEdgeInsets(top: 5, left: (bounds.width - 35), bottom: 5, right: 5)
+//            titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (imageView?.frame.width)!)
+//        }
+//    }
+//}
+
+extension NSMutableAttributedString{
+    func setColorForText(_ textToFind: String, with color: UIColor) {
+        let range = self.mutableString.range(of: textToFind, options: .caseInsensitive)
+        if range.location != NSNotFound {
+            addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+        }
+    }
+}
+
+
+

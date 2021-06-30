@@ -10,7 +10,11 @@ import UIKit
 
 class CreatePassVC: UIViewController {
     
-    //var RegUser : User!
+    var firstName:String!
+    var lastName:String!
+    var email:String!
+//    var user:User!
+    
     
     lazy var CreatePasswordLabel: UILabel = {
         let label = UILabel()
@@ -24,6 +28,16 @@ class CreatePassVC: UIViewController {
         label.stepLabel()
         label.text = "Step 2/3"
         return label
+    }()
+    
+    lazy var regNumber : LeftPaddedTextField = {
+        let txtfield = LeftPaddedTextField()
+        //txtfield.placeholder = "Password"
+        txtfield.cutomizeTextFields(name: "Registration Number")
+        txtfield.autocapitalizationType = .none
+        txtfield.autocorrectionType = .no
+        txtfield.addTarget(self, action: #selector(handleInput), for: .editingChanged)
+        return txtfield
     }()
     
     lazy var passwordTextField : LeftPaddedTextField = {
@@ -46,12 +60,12 @@ class CreatePassVC: UIViewController {
         return txtfield
     }()
     
-    lazy var warningBtn : UIButton = {
-      let btn = UIButton()
-        btn.setTitle("the password must be 8 characters", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1), for: .normal)
-        btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 15)
-        return btn
+    lazy var warning : UILabel = {
+      let lbl = UILabel()
+        lbl.text = "the password must be 8 characters"
+        lbl.textColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        lbl.font = UIFont(name: "Montserrat-Medium", size: 15)
+        return lbl
     }()
 
     lazy var NextNavigation : UIButton = {
@@ -92,11 +106,11 @@ class CreatePassVC: UIViewController {
         _ = ConfirmPasswordField.anchor(top: passwordTextField.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 21, bottomConstant: 0, rightConstant: 0, widthConstant: 332, heightConstant: 50)
         ConfirmPasswordField.isSecureTextEntry = true
         
-        view.addSubview(warningBtn)
-        _ = warningBtn.anchor(top: ConfirmPasswordField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 40, bottomConstant: 0, rightConstant: 0, widthConstant: 350, heightConstant: 17)
+        view.addSubview(warning)
+        _ = warning.anchor(top: ConfirmPasswordField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 40, bottomConstant: 0, rightConstant: 0, widthConstant: 350, heightConstant: 16)
         
         view.addSubview(NextNavigation)
-        _ = NextNavigation.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 23, rightConstant: 43, widthConstant: 60, heightConstant: 60)
+        _ = NextNavigation.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 15, rightConstant: 43, widthConstant: 60, heightConstant: 60)
     }
     
 @objc func handleInput(){
@@ -126,7 +140,9 @@ class CreatePassVC: UIViewController {
 //            }) {}
             return
         }
-            show(MobileDetailVC(), sender: sender)
+//        self.user.password = password
+        //todo create user
+        //login user
     }
     
     fileprivate func observeKeyboardNotifications() {

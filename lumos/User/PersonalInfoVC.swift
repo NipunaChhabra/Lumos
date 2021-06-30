@@ -10,7 +10,7 @@ import UIKit
 
 class PersonalInfoVC: UIViewController {
     
-    //title
+    //var user:User()
 
     lazy var PersonalInfo: UILabel = {
         let label = UILabel()
@@ -118,11 +118,13 @@ class PersonalInfoVC: UIViewController {
     
     @objc func onNextTapped(_ sender: UIButton){
         if validateEmail(enteredEmail: emailField.text!){
-//            RegUser.firstName = firstName.text!
-//            RegUser.lastName = lastName.text!
-//            RegUser.email = emailField.text!
-            
-            show(CreatePassVC(), sender: sender)}
+            let nextvc = CreatePassVC()
+            nextvc.firstName = firstName.text!
+            nextvc.lastName = lastName.text!
+            nextvc.email = emailField.text!
+//            nextvc.user = self.user
+                
+            show(nextvc, sender: sender)}
         else{
 //            FloatingMessage().floatingMessage(Message: "Invalid Email Address", Color: .red, onPresentation: {self.emailField.becomeFirstResponder()}){} //todo
         }

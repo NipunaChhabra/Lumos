@@ -48,8 +48,8 @@ class LandingVC: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
         //label.text = "TechnicalProphet"
         let string = NSMutableAttributedString(string: "Login.")
-        string.setColorForText("Login", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(".", with: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+        string.setColorForText(textForAttribute: "Login", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        string.setColorForText(textForAttribute: ".", withColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
         label.attributedText = string
         //label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
@@ -64,7 +64,19 @@ class LandingVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         navigationItem.titleView = titleLabel
+        
+        let btn = UIButton(type: .custom)
+        btn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30)
+        btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
+        btn.clipsToBounds = true
+        btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let rightBarButtonItem = UIBarButtonItem()
+       rightBarButtonItem.customView = btn
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
         setupLayout()
+        
     }
 
 

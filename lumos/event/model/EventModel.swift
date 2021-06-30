@@ -6,27 +6,34 @@
 //
 
 import Foundation
-struct categoryModel: Decodable{
-    var active: [EventCategories]?
-    var status: String?
+struct categoryModel: Codable{
+    let status: String?
+    let active: [EventCategories]?
 }
 
-struct EventCategories: Decodable {
-    var name: String?
-    var poster: String?
-    var description: String?
-    var registration_link: String?
-    var events: [event]?
+struct EventCategories: Codable{
+    let  name: String?
+    let start_date: String?
+    let end_date: String?
+    let poster: String?
+    let name_slug:String?
+    let  description: String?
+    let registration_link: String?
+    let events: [event]?
     }
 
-struct event: Decodable{
-    var name: String?
-    var description: String?
-    var registration_link: String?
-    var event_date_set: [event_date_set]?
+struct event: Codable{
+    let name: String?
+    let description: String?
+    let is_completed: Bool?
+    let registration_link: String?
+    let event_date_set: [event_date_set]?
 }
 
-struct event_date_set: Decodable{
-    var venue: String?
-    var start_date: Date?
+struct event_date_set: Codable{
+    let venue: String?
+    let start_date: String?
+    let end_date: String?
+    let title: String?
+    
 }

@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
         //btn.layer.borderColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
         btn.layer.borderWidth = 0.5
         btn.layer.cornerRadius = 15.0
-        btn.addTarget(self, action: #selector(onLoginTapped(_ :)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(onLogin(_ :)), for: .touchUpInside)
         return btn
     }()
     
@@ -84,7 +84,7 @@ class LoginVC: UIViewController {
     //var logindelegate = LoginDelegate?
     
     
-    @objc func onLoginTapped(_ sender: UIButton){
+    @objc func onLogin(_ sender: UIButton){
         
         guard let username = UsernameTextField.text else {
 //            FloatingMessage().floatingMessage(Message: "Username empty", Color: .red, onPresentation: {self.UsernameTextField.becomeFirstResponder()}){}

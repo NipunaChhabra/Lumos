@@ -95,8 +95,8 @@ class LoginVC: UIViewController {
             return
             
         }
-        print(username)
-        print(password)
+        //print(username)
+        //print(password)
 
         
         guard let url = URL(string: "https://test.istemanipal.com/api/login") else { return }
@@ -108,7 +108,7 @@ class LoginVC: UIViewController {
             let params = ["username": username, "password": password]
             loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init())
             
-            URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
+            URLSession.shared.dataTask(with: loginRequest) { [self] (data, resp, err) in
                 
 //                if let response = resp {
 //                    //print("response\(response)")
@@ -117,7 +117,14 @@ class LoginVC: UIViewController {
                     do {
                         self.user = try JSONDecoder().decode(User.self, from: data)
                         UserDefaults.standard.set(true,forKey: "isLoggedIn")
+                        Caching.sharedInstance.saveUserDetailsToCache(user: self.user)
                         UserDefaults.standard.synchronize()
+                        //perform(#selector(handleDismiss()))
+                        //self.navigationController?.dismiss(animated: true, completion: nil)
+                        //let vc = AccountVC()
+                        //let vc = AccountVC(nibName: "", bundle: nil)
+                        //show(vc, sender: sender)
+                        
                     } catch {
                         print("error\(error)")
                     }
@@ -128,6 +135,10 @@ class LoginVC: UIViewController {
             print("Failed to serialize data:", error)
         }
        
+    }
+    
+    @objc func handleDismiss(){
+        
     }
     
     fileprivate func observeKeyboardNotifications() {

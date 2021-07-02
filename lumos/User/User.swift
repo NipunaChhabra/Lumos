@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct User:Decodable{
+struct User:Codable{
     var token:String?
     var username:String?
     var first_name:String?

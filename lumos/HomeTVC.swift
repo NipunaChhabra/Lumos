@@ -12,11 +12,10 @@ import UIKit
 //}
 class HomeTVC: UITabBarController{
     
-    var user: User?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
         setupTabBar()
 //        for family: String in UIFont.familyNames
 //        {
@@ -56,7 +55,6 @@ class HomeTVC: UITabBarController{
         var tab4 = UINavigationController(rootViewController: LandingVC())
         if isLoggedIn(){
             let acc = AccountVC()
-            //acc.user = self.user!
             tab4 = UINavigationController(rootViewController: acc)
         }else{
             tab4 = UINavigationController(rootViewController: LandingVC())
@@ -77,8 +75,9 @@ class HomeTVC: UITabBarController{
         
     }
     
-    @objc func handleMore(){}
-
+    func finishLoggingIn(){
+        print("Got user in home")
+    }
 }
 
 

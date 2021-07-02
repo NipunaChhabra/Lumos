@@ -80,7 +80,7 @@ class BlogMoreLauncher: UIViewController{
     func showDim(){
         //print(1223)
         if let window = UIApplication.shared.keyWindow {
-            dimView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
+            dimView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             dimView.alpha = 0.25
             window.addSubview(dimView)
             window.addSubview(Menu)

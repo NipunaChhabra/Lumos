@@ -29,6 +29,18 @@ class PracticeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         navigationItem.titleView = titleLabel
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+        
+        
+        let btn = UIButton(type: .custom)
+        btn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30)
+        btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
+        btn.clipsToBounds = true
+        btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let rightBarButtonItem = UIBarButtonItem()
+       rightBarButtonItem.customView = btn
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
 
     }
 

@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-lumos/Pods-lumos-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Disk/Disk.framework

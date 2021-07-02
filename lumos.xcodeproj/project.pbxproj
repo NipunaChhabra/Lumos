@@ -10,6 +10,8 @@
 		00ACB795636052DD54924036 /* Pods_lumos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4BDABA3EF47CE7C3064137 /* Pods_lumos.framework */; };
 		0A7D30EF128CC95046A94859 /* Pods_lumosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2E982CD5765214B6193A7E /* Pods_lumosTests.framework */; };
 		8D8060A9BADC74D115AA1313 /* Pods_lumos_lumosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8732FF75D2EE242BA862C9 /* Pods_lumos_lumosUITests.framework */; };
+		EA1CB4E6268F4CB50022A993 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CB4E4268F4CB50022A993 /* SettingCell.swift */; };
+		EA1CB4E7268F4CB50022A993 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CB4E5268F4CB50022A993 /* SettingsLauncher.swift */; };
 		EA2986D3268AD4BE007C7F67 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2986D2268AD4BE007C7F67 /* LandingVC.swift */; };
 		EA2986DB268AD9E4007C7F67 /* DummyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2986DA268AD9E4007C7F67 /* DummyVC.swift */; };
 		EA30F1F2268C4C3C0089B949 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30F1F1268C4C3C0089B949 /* EventService.swift */; };
@@ -36,7 +38,6 @@
 		EA8F8A95268713510000AD36 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */; };
 		EAA54E7626872478004F2D5F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7526872478004F2D5F /* Service.swift */; };
 		EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7F26874BF9004F2D5F /* blogmodel.swift */; };
-		EAA8C58A268CD8CE00F78220 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA8C589268CD8CE00F78220 /* MenuCollectionViewCell.swift */; };
 		EAAE7B7E268AF08600FAC6EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE7B7D268AF08600FAC6EF /* User.swift */; };
 		EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5C268644F700DB80D0 /* AppDelegate.swift */; };
 		EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */; };
@@ -48,11 +49,11 @@
 		EAE57E9C2686470F00DB80D0 /* BlogCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */; };
 		EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */; };
 		EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57EA52686477600DB80D0 /* AccountVC.swift */; };
-		EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2327E268664B100984520 /* SettingsLauncher.swift */; };
 		EAF232872686687000984520 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF232862686687000984520 /* Extensions.swift */; };
 		EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF2329026866FE800984520 /* DevelopersVC.swift */; };
 		EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */; };
 		EAFCB5712687000800BD1578 /* BlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFCB5702687000800BD1578 /* BlogCell.swift */; };
+		EAFF7EAE268D23D800164B38 /* Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF7EAD268D23D800164B38 /* Caching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		BA16BFFAD3E1FB9B2BC27753 /* Pods-lumos-lumosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos-lumosUITests.release.xcconfig"; path = "Target Support Files/Pods-lumos-lumosUITests/Pods-lumos-lumosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E120BE941F548663402F9D07 /* Pods-lumosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumosTests.release.xcconfig"; path = "Target Support Files/Pods-lumosTests/Pods-lumosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E68D7BEFC9732ED2C05102AD /* Pods-lumos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumos.release.xcconfig"; path = "Target Support Files/Pods-lumos/Pods-lumos.release.xcconfig"; sourceTree = "<group>"; };
+		EA1CB4E4268F4CB50022A993 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		EA1CB4E5268F4CB50022A993 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		EA2986D2268AD4BE007C7F67 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		EA2986DA268AD9E4007C7F67 /* DummyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyVC.swift; sourceTree = "<group>"; };
 		EA30F1F1268C4C3C0089B949 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
@@ -107,7 +110,6 @@
 		EA8F8A8A268713510000AD36 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EAA54E7526872478004F2D5F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EAA54E7F26874BF9004F2D5F /* blogmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blogmodel.swift; sourceTree = "<group>"; };
-		EAA8C589268CD8CE00F78220 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAAE7B7D268AF08600FAC6EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EAE57E59268644F600DB80D0 /* lumos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lumos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE57E5C268644F700DB80D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,11 +127,11 @@
 		EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCollectionVC.swift; sourceTree = "<group>"; };
 		EAE57EA02686475600DB80D0 /* EventCategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoriesVC.swift; sourceTree = "<group>"; };
 		EAE57EA52686477600DB80D0 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
-		EAF2327E268664B100984520 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		EAF232862686687000984520 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../programmatic/IsteProgrammatic/extensions/Extensions.swift; sourceTree = "<group>"; };
 		EAF2329026866FE800984520 /* DevelopersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersVC.swift; sourceTree = "<group>"; };
 		EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		EAFCB5702687000800BD1578 /* BlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCell.swift; sourceTree = "<group>"; };
+		EAFF7EAD268D23D800164B38 /* Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caching.swift; sourceTree = "<group>"; };
 		FCD47F1DB1ADAC6374B303BE /* Pods-lumosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lumosTests.debug.xcconfig"; path = "Target Support Files/Pods-lumosTests/Pods-lumosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,13 +186,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA1CB4DD268F4BAD0022A993 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
+				EA2986DA268AD9E4007C7F67 /* DummyVC.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
 		EA6D36B2268791A600715EEF /* sidemenu */ = {
 			isa = PBXGroup;
 			children = (
+				EA1CB4E4268F4CB50022A993 /* SettingCell.swift */,
+				EA1CB4E5268F4CB50022A993 /* SettingsLauncher.swift */,
 				EAF2329026866FE800984520 /* DevelopersVC.swift */,
 				EAFCB56B26867E9600BD1578 /* AboutUsVC.swift */,
-				EAF2327E268664B100984520 /* SettingsLauncher.swift */,
-				EAA8C589268CD8CE00F78220 /* MenuCollectionViewCell.swift */,
 			);
 			path = sidemenu;
 			sourceTree = "<group>";
@@ -329,11 +340,11 @@
 				EAE57E5C268644F700DB80D0 /* AppDelegate.swift */,
 				EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */,
 				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
-				EAE57E96268646D200DB80D0 /* PracticeVC.swift */,
-				EA2986DA268AD9E4007C7F67 /* DummyVC.swift */,
 				EA7FE25026892B330064B36C /* StylingRegister.swift */,
+				EAFF7EAD268D23D800164B38 /* Caching.swift */,
 				EA6D36B3268791CB00715EEF /* blog */,
 				EA7FE27926892B710064B36C /* User */,
+				EA1CB4DD268F4BAD0022A993 /* Practice */,
 				EA6D36BD2687B7FF00715EEF /* event */,
 				EA6D36B2268791A600715EEF /* sidemenu */,
 				EAE57E65268644F700DB80D0 /* Assets.xcassets */,
@@ -611,6 +622,7 @@
 				EA7FE25626892B350064B36C /* LoginVC.swift in Sources */,
 				EA30F1FA268C55730089B949 /* EventCollectionViewCell.swift in Sources */,
 				EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */,
+				EAFF7EAE268D23D800164B38 /* Caching.swift in Sources */,
 				EA2986D3268AD4BE007C7F67 /* LandingVC.swift in Sources */,
 				EA7FE25126892B330064B36C /* StylingRegister.swift in Sources */,
 				EA2986DB268AD9E4007C7F67 /* DummyVC.swift in Sources */,
@@ -621,19 +633,19 @@
 				EAF2329126866FE800984520 /* DevelopersVC.swift in Sources */,
 				EA7FE26F26892B520064B36C /* PersonalInfoVC.swift in Sources */,
 				EA7FE25B26892B3A0064B36C /* CreatePassVC.swift in Sources */,
+				EA1CB4E6268F4CB50022A993 /* SettingCell.swift in Sources */,
 				EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */,
 				EAFCB5712687000800BD1578 /* BlogCell.swift in Sources */,
 				EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */,
 				EA6ECB7926887B9300CFF9D6 /* BlogMoreLauncher.swift in Sources */,
 				EA6D36D62687E21B00715EEF /* EventCategoriesCollectionViewCell.swift in Sources */,
-				EAA8C58A268CD8CE00F78220 /* MenuCollectionViewCell.swift in Sources */,
 				EAE57EA62686477600DB80D0 /* AccountVC.swift in Sources */,
 				EAAE7B7E268AF08600FAC6EF /* User.swift in Sources */,
 				EA30F1F2268C4C3C0089B949 /* EventService.swift in Sources */,
 				EAE57EA12686475600DB80D0 /* EventCategoriesVC.swift in Sources */,
 				EAE57E9C2686470F00DB80D0 /* BlogCollectionVC.swift in Sources */,
 				EAE57E97268646D200DB80D0 /* PracticeVC.swift in Sources */,
-				EAF2327F268664B100984520 /* SettingsLauncher.swift in Sources */,
+				EA1CB4E7268F4CB50022A993 /* SettingsLauncher.swift in Sources */,
 				EA6D36D12687E12800715EEF /* EventVC.swift in Sources */,
 				EA6D36BF2687B9F800715EEF /* EventModel.swift in Sources */,
 				EAFCB56C26867E9600BD1578 /* AboutUsVC.swift in Sources */,

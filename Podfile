@@ -7,6 +7,7 @@ target 'lumos' do
 
   # Pods for lumos
 	pod 'Alamofire', '~> 5.2'
+	pod 'Disk', '~> 0.6.4'
 
 
   target 'lumosTests' do

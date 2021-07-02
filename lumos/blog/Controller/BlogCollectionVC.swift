@@ -25,8 +25,6 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         return label
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +42,7 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
         btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        btn.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
         let rightBarButtonItem = UIBarButtonItem()
        rightBarButtonItem.customView = btn
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
@@ -99,17 +98,39 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let blogView = BlogLauncherViewController()
         blogView.blog = blogs[indexPath.item]
-        show(blogView, sender: self)
+        navigationController?.pushViewController(blogView, animated: true)
+        //push(blogView, sender: self)
     }
-
+    
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        launcher.homeController = self
+        return launcher
+    }()
+    
+    func showControllerForSetting(setting: Setting) {
+        var vc = UIViewController()
+        let ac = AboutUsVC()
+        let dc = DevelopersVC()
+        if setting.name == "AboutUs"{
+            vc = ac
+        }
+        else if setting.name == "Developers"{
+            vc = dc
+        }
+        vc.navigationItem.title = setting.name
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func handleMore() {
+        settingsLauncher.showSettings()
+        
+        
+    }
     
 
-    
-//    let settingsLauncher = SettingsLauncher()
-//    @objc func handleMore() {
-//        settingsLauncher.showSettings()
-//    }
-    
 
     /*
     // MARK: - Navigation

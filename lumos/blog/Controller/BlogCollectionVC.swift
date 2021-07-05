@@ -16,7 +16,7 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         //label.text = "TechnicalProphet"
         let string = NSMutableAttributedString(string: "TechnicalProphet")
         string.setColorForText(textForAttribute: "Technical", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(textForAttribute: "Prophet", withColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+        string.setColorForText(textForAttribute: "Prophet", withColor: UIColor(named: "yellow")!)
         label.attributedText = string
         //label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
@@ -30,7 +30,7 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         
         self.collectionView!.register(BlogCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        collectionView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        collectionView.backgroundColor = UIColor(named: "whiteblack")
         collectionView.isScrollEnabled = true
         navigationItem.titleView = titleLabel
         navigationController?.navigationBar.isTranslucent = false
@@ -41,7 +41,7 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         let config = UIImage.SymbolConfiguration(pointSize: 30)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-        btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        btn.tintColor = UIColor(named: "text")
         btn.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
         let rightBarButtonItem = UIBarButtonItem()
        rightBarButtonItem.customView = btn
@@ -76,7 +76,7 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BlogCell
         
-        cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cell.backgroundColor = UIColor(named: "background")
         cell.layer.cornerRadius = 10
         cell.blog = blogs[indexPath.item]
         return cell
@@ -119,27 +119,13 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
             vc = dc
         }
         vc.navigationItem.title = setting.name
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor(named: "navBar")
 //        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func handleMore() {
         settingsLauncher.showSettings()
-        
-        
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

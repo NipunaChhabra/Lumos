@@ -46,7 +46,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     lazy var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "title"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Bold", size: 25)
         label.numberOfLines = 3
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -59,7 +59,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     lazy var descLabel : UILabel = {
        let label = UILabel()
         label.text = "dhffhkjd kfhasdfkh fkjhfjksd fsjkhaskJFH HFJKFH FKHkjh"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 15)
         label.clipsToBounds = true
         label.numberOfLines = 22
@@ -72,7 +72,7 @@ class EventCollectionViewCell: UICollectionViewCell {
        let label = UIButton()
         label.setTitle("Registration Link", for: .normal)
         //label.configure(color: #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1), font:  UIFont(name: "Montserrat-Medium", size: 16)!,borderWidth: 0)
-        label.configure(color: #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1), font: UIFont(name: "Montserrat-Medium", size: 16)!, cornerRadius: 0, borderColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), borderWidth: 0)
+        label.configure(color: UIColor(named: "Accent")!, font: UIFont(name: "Montserrat-Medium", size: 16)!, cornerRadius: 0, borderColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), borderWidth: 0)
         label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
         label.addTarget(self, action: #selector(Button(_ :)), for: .touchUpInside)
@@ -86,14 +86,14 @@ class EventCollectionViewCell: UICollectionViewCell {
         let config = UIImage.SymbolConfiguration(pointSize: 18)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "Accent")
         return btn
     }()
     
     lazy var locLabel : UILabel = {
        let label = UILabel()
         label.text = ""
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 15)
         label.clipsToBounds = true
         label.textAlignment = NSTextAlignment.left
@@ -107,14 +107,14 @@ class EventCollectionViewCell: UICollectionViewCell {
         let config = UIImage.SymbolConfiguration(pointSize: 18)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "Accent")
         return btn
     }()
     
     lazy var dateLabel : UILabel = {
        let label = UILabel()
         label.text = ""
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 15)
         label.clipsToBounds = true
         label.textAlignment = NSTextAlignment.left
@@ -130,7 +130,7 @@ class EventCollectionViewCell: UICollectionViewCell {
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
         btn.addTarget(self, action: #selector(Button(_ :)), for: .touchUpInside)
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "Accent")
         return btn
     }()
     

@@ -39,6 +39,7 @@ class SettingCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Setting"
         label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = UIColor(named: "text")
         return label
     }()
     

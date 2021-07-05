@@ -39,6 +39,7 @@
 		EAA54E7626872478004F2D5F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7526872478004F2D5F /* Service.swift */; };
 		EAA54E8026874BF9004F2D5F /* blogmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA54E7F26874BF9004F2D5F /* blogmodel.swift */; };
 		EAAE7B7E268AF08600FAC6EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAE7B7D268AF08600FAC6EF /* User.swift */; };
+		EAE1D80A2692A1AF00A91E2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE1D8092692A1AF00A91E2B /* Colors.xcassets */; };
 		EAE57E5D268644F700DB80D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5C268644F700DB80D0 /* AppDelegate.swift */; };
 		EAE57E5F268644F700DB80D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */; };
 		EAE57E61268644F700DB80D0 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE57E60268644F700DB80D0 /* HomeTVC.swift */; };
@@ -111,6 +112,7 @@
 		EAA54E7526872478004F2D5F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EAA54E7F26874BF9004F2D5F /* blogmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blogmodel.swift; sourceTree = "<group>"; };
 		EAAE7B7D268AF08600FAC6EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EAE1D8092692A1AF00A91E2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EAE57E59268644F600DB80D0 /* lumos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lumos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE57E5C268644F700DB80D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE57E5E268644F700DB80D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,9 +222,9 @@
 		EA6D36BD2687B7FF00715EEF /* event */ = {
 			isa = PBXGroup;
 			children = (
-				EA7FE22426891B040064B36C /* views */,
 				EA7FE22326891AEE0064B36C /* model */,
 				EA7FE22226891AC70064B36C /* controllers */,
+				EA7FE22426891B040064B36C /* views */,
 				EA30F1F1268C4C3C0089B949 /* EventService.swift */,
 			);
 			path = event;
@@ -247,8 +249,8 @@
 		EA7FE2112688E9740064B36C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */,
 				EAE57E9B2686470F00DB80D0 /* BlogCollectionVC.swift */,
+				EA6D36C52687C9D500715EEF /* BlogLauncherViewController.swift */,
 				EA6ECB7826887B9300CFF9D6 /* BlogMoreLauncher.swift */,
 			);
 			path = Controller;
@@ -283,12 +285,12 @@
 		EA7FE27926892B710064B36C /* User */ = {
 			isa = PBXGroup;
 			children = (
+				EAAE7B7D268AF08600FAC6EF /* User.swift */,
 				EAE57EA52686477600DB80D0 /* AccountVC.swift */,
 				EA2986D2268AD4BE007C7F67 /* LandingVC.swift */,
 				EA7FE25526892B350064B36C /* LoginVC.swift */,
 				EA7FE26E26892B520064B36C /* PersonalInfoVC.swift */,
 				EA7FE25A26892B3A0064B36C /* CreatePassVC.swift */,
-				EAAE7B7D268AF08600FAC6EF /* User.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -342,12 +344,13 @@
 				EAE57E60268644F700DB80D0 /* HomeTVC.swift */,
 				EA7FE25026892B330064B36C /* StylingRegister.swift */,
 				EAFF7EAD268D23D800164B38 /* Caching.swift */,
+				EA6D36B2268791A600715EEF /* sidemenu */,
 				EA6D36B3268791CB00715EEF /* blog */,
+				EA6D36BD2687B7FF00715EEF /* event */,
 				EA7FE27926892B710064B36C /* User */,
 				EA1CB4DD268F4BAD0022A993 /* Practice */,
-				EA6D36BD2687B7FF00715EEF /* event */,
-				EA6D36B2268791A600715EEF /* sidemenu */,
 				EAE57E65268644F700DB80D0 /* Assets.xcassets */,
+				EAE1D8092692A1AF00A91E2B /* Colors.xcassets */,
 				EAE57E6A268644F700DB80D0 /* Info.plist */,
 				EAF232862686687000984520 /* Extensions.swift */,
 			);
@@ -482,6 +485,7 @@
 			files = (
 				EA8F8A93268713510000AD36 /* OpenSans-Bold.ttf in Resources */,
 				EA8F8A8E268713510000AD36 /* Montserrat-Light.ttf in Resources */,
+				EAE1D80A2692A1AF00A91E2B /* Colors.xcassets in Resources */,
 				EA8F8A8F268713510000AD36 /* Montserrat-Black.ttf in Resources */,
 				EA8F8A92268713510000AD36 /* Roboto-Light.ttf in Resources */,
 				EA8F8A94268713510000AD36 /* OpenSans-SemiBold.ttf in Resources */,

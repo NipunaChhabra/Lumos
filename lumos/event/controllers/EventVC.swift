@@ -18,7 +18,7 @@ class EventVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
         self.collectionView.delegate = self
         
         //navigationItem.titleView = titleLabel
-        collectionView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        collectionView.backgroundColor = UIColor(named: "whiteblack")
         collectionView.isScrollEnabled = true
         navigationController?.navigationBar.isTranslucent = false
 
@@ -29,7 +29,7 @@ class EventVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
             let string = NSMutableAttributedString(string: "EventCategories.")
             string.setColorForText("Event", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-            string.setColorForText("Categories.", with: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+            string.setColorForText("Categories.", with: UIColor(named: "yellow")!)
             label.attributedText = string
             label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
             label.textAlignment = NSTextAlignment.left
@@ -50,7 +50,7 @@ class EventVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EventCollectionViewCell
             
-            cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.backgroundColor = UIColor(named: "background")
             cell.layer.cornerRadius = 10
             cell.event = events[indexPath.item]
             //print(events[indexPath.item])

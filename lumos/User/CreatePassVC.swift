@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreatePassVC: UIViewController {
+class CreatePassVC: UIViewController, UITextFieldDelegate {
     
     var firstName:String!
     var lastName:String!
@@ -63,14 +63,14 @@ class CreatePassVC: UIViewController {
     lazy var warning : UILabel = {
       let lbl = UILabel()
         lbl.text = "the password must be 8 characters"
-        lbl.textColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        lbl.textColor = UIColor(named: "primary")
         lbl.font = UIFont(name: "Montserrat-Medium", size: 15)
         return lbl
     }()
 
     lazy var NextNavigation : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        btn.tintColor = UIColor(named: "Accent")
         btn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 60)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -79,9 +79,24 @@ class CreatePassVC: UIViewController {
         return btn
     }()
     
+    var placeHolder = ""
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           // textField.borderStyle = .line
+        textField.layer.borderColor = UIColor(named: "primary")?.cgColor
+        placeHolder = textField.placeholder ?? ""
+        textField.placeholder = ""
+        }
+
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            textField.layer.borderColor = UIColor(named: "text")?.cgColor
+            if textField.placeholder == ""{
+            textField.placeholder = placeHolder
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        view.backgroundColor = UIColor(named: "background")
         //observeKeyboardNotifications()
         //title = "Registration Step 2/3"
         setupLayout()

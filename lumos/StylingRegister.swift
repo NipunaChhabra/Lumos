@@ -19,26 +19,30 @@ extension UITextField {
 //            .font: UIFont(name: "Montserrat-Medium", size: 18)!
 //            ])
         
-        configure(color: #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1), font: UIFont(name: "Montserrat-Medium", size: 18)!, cornerRadius: 20, borderColor: #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1), backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), borderWidth: 1.5)
+        configure(color: UIColor(named: "text")!, font: UIFont(name: "Montserrat-Medium", size: 18)!, cornerRadius: 20, borderColor:UIColor(named: "text"), backgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), borderWidth: 1.5)
         translatesAutoresizingMaskIntoConstraints = false
         attributedPlaceholder = NSAttributedString(string: name, attributes: [
-            .foregroundColor: #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1),
+            .foregroundColor: UIColor(named: "text")!,
             .font: UIFont(name: "Montserrat-Medium", size: 18)!
             ])
+        if (isSelected == true) {
+            //if(traitCollection.userInterfaceStyle == .light)
+            layer.borderColor = UIColor(named: "primary")!.cgColor
+            }
         
     }
 }
 
 extension UILabel{
     func headerLabel(){
-        textColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        textColor = UIColor(named: "primary")
        //textColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
        font = UIFont(name: "Montserrat-Bold", size: 36)
        textAlignment = NSTextAlignment.left
     }
     
     func stepLabel(){
-        textColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        textColor = UIColor(named: "primary")
        //textColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
        font = UIFont(name: "Montserrat-Bold", size: 18)
        textAlignment = NSTextAlignment.left
@@ -73,6 +77,3 @@ extension NSMutableAttributedString{
         }
     }
 }
-
-
-

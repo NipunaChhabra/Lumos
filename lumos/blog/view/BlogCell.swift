@@ -40,7 +40,7 @@ class BlogCell: UICollectionViewCell {
     
     lazy var elipseButton : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        btn.tintColor = UIColor(named: "text")
         btn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 20)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -62,7 +62,7 @@ class BlogCell: UICollectionViewCell {
     lazy var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "title"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Bold", size: 16)
         label.numberOfLines = 3
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -75,7 +75,7 @@ class BlogCell: UICollectionViewCell {
     lazy var nameLabel : UILabel = {
        let label = UILabel()
         label.text = "name"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 14)
         label.clipsToBounds = true
         label.textAlignment = NSTextAlignment.left
@@ -87,7 +87,7 @@ class BlogCell: UICollectionViewCell {
     lazy var timeLabel : UILabel = {
         let label = UILabel()
         label.text = "2:30"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 14)
         label.clipsToBounds = true
         label.textAlignment = NSTextAlignment.left

@@ -48,7 +48,7 @@ class EventCategoriesCollectionViewCell: UICollectionViewCell {
     lazy var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "title"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Bold", size: 20)
         label.numberOfLines = 3
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -61,7 +61,7 @@ class EventCategoriesCollectionViewCell: UICollectionViewCell {
     lazy var descLabel : UILabel = {
        let label = UILabel()
         label.text = "dhffhkjd kfhasdfkh fkjhfjksd fsjkhaskJFH HFJKFH FKHkjh"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Medium", size: 16)
         label.clipsToBounds = true
         label.numberOfLines = 15

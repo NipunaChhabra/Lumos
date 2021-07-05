@@ -11,10 +11,10 @@ class LandingVC: UIViewController {
     
     lazy var signUpBtn : UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+        btn.backgroundColor = UIColor(named: "primary")
         //btn.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)//darkmode
         btn.setTitle("Sign Up", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        btn.setTitleColor(UIColor(named: "loginText"), for: .normal)
         //btn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)//darkmode
         if isSmalliPhone(){
           btn.titleLabel?.font = UIFont(name: "Montserrat-Mesium", size: 15)
@@ -31,7 +31,7 @@ class LandingVC: UIViewController {
     lazy var loginBtn : UIButton = {
       let btn = UIButton()
         btn.setTitle("Already have an account? Login", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1), for: .normal)
+        btn.setTitleColor(UIColor(named: "primary"), for: .normal)
         //btn.setTitleColor(#colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1), for: .normal)//darkmode
         if isSmalliPhone(){
             btn.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 10)
@@ -49,7 +49,7 @@ class LandingVC: UIViewController {
         //label.text = "TechnicalProphet"
         let string = NSMutableAttributedString(string: "Login.")
         string.setColorForText(textForAttribute: "Login", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(textForAttribute: ".", withColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
+        string.setColorForText(textForAttribute: ".", withColor: UIColor(named: "yellow")!)
         label.attributedText = string
         //label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
@@ -62,7 +62,7 @@ class LandingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        view.backgroundColor = UIColor(named: "background")
         navigationItem.titleView = titleLabel
         
         let btn = UIButton(type: .custom)
@@ -70,7 +70,7 @@ class LandingVC: UIViewController {
         let config = UIImage.SymbolConfiguration(pointSize: 30)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-        btn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        btn.tintColor = UIColor(named: "text")
         let rightBarButtonItem = UIBarButtonItem()
        rightBarButtonItem.customView = btn
         self.navigationItem.rightBarButtonItem = rightBarButtonItem

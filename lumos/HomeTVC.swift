@@ -36,9 +36,10 @@ class HomeTVC: UITabBarController{
 
     func setupTabBar(){
         
-        tabBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-       tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6945673304, green: 0.6945673304, blue: 0.6945673304, alpha: 1)
-       tabBar.tintColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+        tabBar.backgroundColor = UIColor(named: "whiteblack")
+        tabBar.unselectedItemTintColor = UIColor(named:"text")
+       tabBar.tintColor = UIColor(named: "barTint")
+        tabBar.isTranslucent = false
         
         let tab1 = UINavigationController(rootViewController: BlogCollectionVC(collectionViewLayout: UICollectionViewFlowLayout()))
         let tab2 = UINavigationController(rootViewController: EventCategoriesVC(collectionViewLayout: UICollectionViewFlowLayout()))
@@ -66,7 +67,7 @@ class HomeTVC: UITabBarController{
             return
         }
 //
-        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColor(named: "navBar")
         
         items[0].image = UIImage(named: "blog icon")
         items[1].image = UIImage(named: "event")

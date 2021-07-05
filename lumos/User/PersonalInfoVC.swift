@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonalInfoVC: UIViewController {
+class PersonalInfoVC: UIViewController, UITextFieldDelegate {
     
     //var user:User()
 
@@ -60,7 +60,7 @@ class PersonalInfoVC: UIViewController {
     
     lazy var NextNavigation : UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.08235294118, green: 0.2039215686, blue: 0.2509803922, alpha: 1)
+        btn.tintColor = UIColor(named: "Accent")
         btn.setImage(UIImage(systemName: "greaterthan.circle.fill"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 45)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -68,11 +68,26 @@ class PersonalInfoVC: UIViewController {
         btn.isEnabled = false
         return btn
     }()
+    
+    var placeHolder = ""
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           // textField.borderStyle = .line
+        textField.layer.borderColor = UIColor(named: "primary")?.cgColor
+        placeHolder = textField.placeholder ?? ""
+        textField.placeholder = ""
+        }
+
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            textField.layer.borderColor = UIColor(named: "text")?.cgColor
+            if textField.placeholder == ""{
+            textField.placeholder = placeHolder
+            }
+        }
 
     override func viewDidLoad() {
             super.viewDidLoad()
             //RegUser = User()
-            view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            view.backgroundColor = UIColor(named: "background")
             setupLayout()
             observeKeyboardNotifications()
     }

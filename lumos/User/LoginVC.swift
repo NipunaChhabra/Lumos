@@ -8,21 +8,21 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
     var user:User?
     
     lazy var LoginBtn : UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.1529411765, blue: 0.2078431373, alpha: 1)
+        btn.backgroundColor = UIColor(named: "primary")
         //btn.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)//darkmode
         btn.setTitle("LOGIN", for: .normal)
-        btn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        btn.setTitleColor(UIColor(named: "loginText"), for: .normal)
         //btn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)//darkmode
         if isSmalliPhone(){
-          btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 20)
+          btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 14)
         }else{
-            btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 28)
+            btn.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 18)
         }
         //btn.layer.borderColor = #colorLiteral(red: 0.1882352941, green: 0.9294117647, blue: 0.6196078431, alpha: 1)
         btn.layer.borderWidth = 0.5
@@ -50,12 +50,29 @@ class LoginVC: UIViewController {
         return txtfield
     }()
     
+    var placeHolder = ""
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+           // textField.borderStyle = .line
+        textField.layer.borderColor = UIColor(named: "primary")?.cgColor
+        placeHolder = textField.placeholder ?? ""
+        textField.placeholder = ""
+        }
+
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            textField.layer.borderColor = UIColor(named: "text")?.cgColor
+            if textField.placeholder == ""{
+            textField.placeholder = placeHolder
+            }
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        view.backgroundColor = UIColor(named: "background")
         //title = "Login"
         setupLayout()
         observeKeyboardNotifications()
+        UsernameTextField.delegate = self
+        PasswordTextField.delegate = self
 
     }
     
@@ -68,10 +85,10 @@ class LoginVC: UIViewController {
         let centerX = LoginBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         NSLayoutConstraint.activate([centerX])
         
-        _ = UsernameTextField.anchor(top: nil, left: view.leftAnchor, bottom:PasswordTextField.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 30, bottomConstant: 5, rightConstant: 30, widthConstant: 0, heightConstant: 50)
+        _ = UsernameTextField.anchor(top: nil, left: view.leftAnchor, bottom:PasswordTextField.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 40, bottomConstant: 5, rightConstant: 40, widthConstant: 0, heightConstant: 50)
         
 
-        _ = PasswordTextField.anchor(top: nil, left: view.leftAnchor, bottom:LoginBtn.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 30, bottomConstant: 5, rightConstant: 30, widthConstant: 0, heightConstant: 50)
+        _ = PasswordTextField.anchor(top: nil, left: view.leftAnchor, bottom:LoginBtn.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 40, bottomConstant: 5, rightConstant: 40, widthConstant: 0, heightConstant: 50)
         
     }
     

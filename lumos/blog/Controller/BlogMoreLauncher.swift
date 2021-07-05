@@ -26,7 +26,7 @@ class BlogMoreLauncher: UIViewController{
     lazy var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "title"
-        label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label.textColor = UIColor(named: "text")
         label.font = UIFont(name: "Montserrat-Bold", size: 15)
         label.numberOfLines = 3
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -38,7 +38,7 @@ class BlogMoreLauncher: UIViewController{
     
     lazy var shareicon: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "primaryLight")
         btn.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 40)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -49,7 +49,7 @@ class BlogMoreLauncher: UIViewController{
     
     lazy var bookmarkicon: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "primaryLight")
         btn.setImage(UIImage(systemName: "bookmark"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 40)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -60,7 +60,7 @@ class BlogMoreLauncher: UIViewController{
     
     lazy var abouticon: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.tintColor = #colorLiteral(red: 0.07058823529, green: 0.9215686275, blue: 0.8705882353, alpha: 1)
+        btn.tintColor = UIColor(named: "primaryLight")
         btn.setImage(UIImage(systemName: "info.circle.fill"), for: .normal)
         let config = UIImage.SymbolConfiguration(pointSize: 40)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
@@ -73,7 +73,7 @@ class BlogMoreLauncher: UIViewController{
     
     let Menu: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        view.backgroundColor = UIColor(named: "background")
         return view
     }()
     
@@ -137,3 +137,4 @@ class BlogMoreLauncher: UIViewController{
     
 
 }
+

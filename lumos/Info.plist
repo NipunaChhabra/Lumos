@@ -64,16 +64,7 @@
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<array>
-			<string>Roboto-LightItalic.ttf</string>
-			<string>Roboto-Light.ttf</string>
-			<string>Montserrat-Thin.ttf</string>
-			<string>Montserrat-Bold.ttf</string>
-			<string>Montserrat-Medium.ttf</string>
-			<string>Montserrat-Light.ttf</string>
-		</array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 </dict>
 </plist>

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "3709561_ig_instagram_instagram icon_social media_icon (1).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "3709561_ig_instagram_instagram icon_social media_icon (1)-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "3709561_ig_instagram_instagram icon_social media_icon (1)-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

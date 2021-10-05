@@ -15,8 +15,8 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
         //label.text = "TechnicalProphet"
         let string = NSMutableAttributedString(string: "TechnicalProphet")
-        string.setColorForText(textForAttribute: "Technical", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(textForAttribute: "Prophet", withColor: UIColor(named: "yellow")!)
+        string.setColorForText("Technical", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        string.setColorForText("Prophet", with: UIColor(named: "yellow")!)
         label.attributedText = string
         //label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
@@ -111,12 +111,16 @@ class BlogCollectionVC: UICollectionViewController, UICollectionViewDelegateFlow
     func showControllerForSetting(setting: Setting) {
         var vc = UIViewController()
         let ac = AboutUsVC()
-        let dc = DevelopersVC()
+        let dc = DevelopersVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let theme = ThemeVC()
         if setting.name == "AboutUs"{
             vc = ac
         }
         else if setting.name == "Developers"{
             vc = dc
+        }
+        else if setting.name == "Theme"{
+            vc = theme
         }
         vc.navigationItem.title = setting.name
         navigationController?.navigationBar.tintColor = UIColor(named: "navBar")

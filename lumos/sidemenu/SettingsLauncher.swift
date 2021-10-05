@@ -33,7 +33,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     let cellHeight: CGFloat = 50
     
     let settings: [Setting] = {
-        return [Setting(name: "Theme"), Setting(name: "AboutUs"), Setting(name: "Developers")]
+        return [Setting(name: "AboutUs"), Setting(name: "Developers")]
     }()
     
     func showSettings() {

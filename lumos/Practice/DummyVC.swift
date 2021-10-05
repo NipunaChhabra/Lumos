@@ -13,8 +13,8 @@ class DummyVC: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
         //label.text = "TechnicalProphet"
         let string = NSMutableAttributedString(string: "Practice.")
-        string.setColorForText(textForAttribute: "Practice", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(textForAttribute: ".", withColor: UIColor(named: "yellow")!)
+        string.setColorForText("Practice", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        string.setColorForText(".", with: UIColor(named: "yellow")!)
         label.attributedText = string
         //label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)

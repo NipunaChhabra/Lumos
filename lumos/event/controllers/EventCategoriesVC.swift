@@ -14,8 +14,8 @@ class EventCategoriesVC: UICollectionViewController, UICollectionViewDelegateFlo
     lazy var titleLabel : UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 10, height: view.frame.height))
         let string = NSMutableAttributedString(string: "EventCategories.")
-        string.setColorForText(textForAttribute: "Event", withColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-        string.setColorForText(textForAttribute: "Categories.", withColor: UIColor(named: "yellow")!)
+        string.setColorForText("Event", with: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        string.setColorForText("Categories.", with: UIColor(named: "yellow")!)
         label.attributedText = string
         label.font = UIFont(name: "OpenSans-ExtraBold", size: 22)
         label.textAlignment = NSTextAlignment.left

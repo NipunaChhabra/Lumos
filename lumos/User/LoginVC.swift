@@ -98,8 +98,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return emailPredicate.evaluate(with: enteredEmail)
     }
     
-    //var logindelegate = LoginDelegate?
-    
+//    var loginDelegate = HomeTVCLogin.self
+    var homeTVC = HomeTVC()
     
     @objc func onLogin(_ sender: UIButton){
         
@@ -127,15 +127,23 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             
             URLSession.shared.dataTask(with: loginRequest) { [self] (data, resp, err) in
                 
-//                if let response = resp {
-//                    //print("response\(response)")
-//                }
+                if let response = resp {
+                    print("this is the response\(response)")
+                }
                 if let data = data {
                     do {
                         self.user = try JSONDecoder().decode(User.self, from: data)
-                        UserDefaults.standard.set(true,forKey: "isLoggedIn")
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         Caching.sharedInstance.saveUserDetailsToCache(user: self.user)
                         UserDefaults.standard.synchronize()
+                        print("this is the data\(data)")
+                        print(user?.last_name)
+//                        homeTVC.user = user
+                        self.dismiss(animated:true, completion: {})
+                        DispatchQueue.main.async {
+//                            use delegate
+                            homeTVC.finishLoggingIn()
+                        }
                         //perform(#selector(handleDismiss()))
                         //self.navigationController?.dismiss(animated: true, completion: nil)
                         //let vc = AccountVC()

@@ -79,7 +79,9 @@ Emanating from the roots of technology, ISTE Students' Chapter Manipal constitut
         view.addSubview(InstaIcon)
         view.addSubview(WebIcon)
         
-        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Accent")
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "Accent")]
+        
         _ = bgImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: nil, bottom:nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 100)
         _ = descLabel.anchor(top: bgImage.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.safeAreaLayoutGuide.rightAnchor, topConstant: 10, leftConstant: 8, bottomConstant: 80, rightConstant: 8)
             let centerX = descLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)

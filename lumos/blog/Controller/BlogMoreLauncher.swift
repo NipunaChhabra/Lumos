@@ -11,6 +11,9 @@ import UIKit
 class BlogMoreLauncher: UIViewController{
     
     var id = ""
+    var desc = ""
+    
+    var flag = false
     
     var blog:Blog?{
         didSet{
@@ -20,14 +23,60 @@ class BlogMoreLauncher: UIViewController{
             if let ID = blog?._id{
             self.id = ID
             }
+            if let desc = blog?.shortDescription{
+                descLabel.text = desc
+            }
+            if let auth = blog?.author{
+                authLabel.text = auth
+            }
+            if let about = blog?.aboutAuthor{
+                aboutAuthLabel.text = about
+            }
+            
         }
     }
+    
+    lazy var descLabel : UILabel = {
+       let label = UILabel()
+        label.text = "name"
+        label.textColor = UIColor(named: "primary")
+        label.font = UIFont(name: "Montserrat-Medium", size: 12)
+        label.clipsToBounds = true
+        label.textAlignment = NSTextAlignment.left
+        label.numberOfLines = 5
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var authLabel : UILabel = {
+       let label = UILabel()
+        label.text = "name"
+        label.textColor = UIColor(named: "primary")
+        label.font = UIFont(name: "Montserrat-Medium", size: 12)
+        label.clipsToBounds = true
+        label.textAlignment = NSTextAlignment.left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var aboutAuthLabel : UILabel = {
+       let label = UILabel()
+        label.text = "name"
+        label.textColor = UIColor(named: "primary")
+        label.font = UIFont(name: "Montserrat-Medium", size: 12)
+        label.clipsToBounds = true
+        label.textAlignment = NSTextAlignment.left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    
     
     lazy var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "title"
         label.textColor = UIColor(named: "text")
-        label.font = UIFont(name: "Montserrat-Bold", size: 15)
+        label.font = UIFont(name: "Montserrat-Bold", size: 16)
         label.numberOfLines = 3
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         //label.clipsToBounds = true
@@ -65,7 +114,7 @@ class BlogMoreLauncher: UIViewController{
         let config = UIImage.SymbolConfiguration(pointSize: 40)
         btn.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         btn.clipsToBounds = true
-       btn.addTarget(self, action: #selector(handleDismiss(_:)), for: .touchUpInside)
+       btn.addTarget(self, action: #selector(handleAbout(_:)), for: .touchUpInside)
         return btn
     }()
     
@@ -135,6 +184,35 @@ class BlogMoreLauncher: UIViewController{
         self.present(activityVC,animated:true,completion:nil)
     }
     
-
+//    let aboutBlog = AboutBlogVC()
+    
+    @objc func handleAbout(_ sender: UIView){
+        if flag == false {
+        Menu.frame = CGRect(x: 0, y: Menu.frame.minY-85, width: Menu.frame.width, height: Menu.frame.height+85)
+        
+        Menu.addSubview(descLabel)
+        Menu.addSubview(authLabel)
+        Menu.addSubview(aboutAuthLabel)
+        
+        Menu.addConstraintsWithFormat("H:|-10-[v0]-10-|", views: descLabel)
+        Menu.addConstraintsWithFormat("H:|-10-[v0]", views: authLabel)
+        Menu.addConstraintsWithFormat("H:|-10-[v0]", views: aboutAuthLabel)
+        
+        Menu.addConstraint(NSLayoutConstraint(item: descLabel, attribute: .top, relatedBy: .equal, toItem: abouticon, attribute: .bottom, multiplier: 1, constant: 3))
+        Menu.addConstraint(NSLayoutConstraint(item: authLabel, attribute: .top, relatedBy: .equal, toItem: descLabel, attribute: .bottom, multiplier: 1, constant: 1))
+        Menu.addConstraint(NSLayoutConstraint(item: aboutAuthLabel, attribute: .top, relatedBy: .equal, toItem: authLabel, attribute: .bottom, multiplier: 1, constant: 1))
+            
+            flag = true
+        }
+        else
+        {
+            descLabel.removeFromSuperview()
+            authLabel.removeFromSuperview()
+            aboutAuthLabel.removeFromSuperview()
+            Menu.frame = CGRect(x: 0, y: Menu.frame.minY+85, width: Menu.frame.width, height: Menu.frame.height+85)
+            flag = false
+        }
+        
+    }
 }
 
